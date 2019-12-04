@@ -1,0 +1,3 @@
+# 5.2 JavaScript过渡
+
+Vue.js也可以和一些JavaScript动画库配合使用，这里只需要调用JavaScript钩子函数，而不需要定义CSS样式。transition接受选项css:false，将直接跳过CSS检测，避免CSS规则干扰过渡，而且需要在enter和leave钩子函数中调用done函数，明确过渡结束时间。此处将引入Velocity.js来配合使用JavaScript过渡。

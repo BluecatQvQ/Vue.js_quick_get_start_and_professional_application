@@ -1,0 +1,1776 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.1.1 CSS过渡的用法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5.1.2.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../chapter1/">
+            
+                <a href="../../chapter1/">
+            
+                    
+                    第 1 章 Vue.js简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../chapter1/1.1.html">
+            
+                <a href="../../chapter1/1.1.html">
+            
+                    
+                    1.1 Vue.js是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../chapter1/1.2.html">
+            
+                <a href="../../chapter1/1.2.html">
+            
+                    
+                    1.2 Vue.js的Hello world
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../chapter2/">
+            
+                <a href="../../chapter2/">
+            
+                    
+                    第 2 章 基础特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../chapter2/2.1/">
+            
+                <a href="../../chapter2/2.1/">
+            
+                    
+                    2.1 实列及选项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../chapter2/2.1/2.1.1.html">
+            
+                <a href="../../chapter2/2.1/2.1.1.html">
+            
+                    
+                    2.1.1 模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../chapter2/2.1/2.1.2.html">
+            
+                <a href="../../chapter2/2.1/2.1.2.html">
+            
+                    
+                    2.1.2 数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../chapter2/2.1/2.1.3.html">
+            
+                <a href="../../chapter2/2.1/2.1.3.html">
+            
+                    
+                    2.1.3 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../chapter2/2.1/2.1.4.html">
+            
+                <a href="../../chapter2/2.1/2.1.4.html">
+            
+                    
+                    2.1.4 生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../chapter2/2.2/">
+            
+                <a href="../../chapter2/2.2/">
+            
+                    
+                    2.2 数据绑定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../chapter2/2.2/2.2.1.html">
+            
+                <a href="../../chapter2/2.2/2.2.1.html">
+            
+                    
+                    2.2.1 数据绑定语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../chapter2/2.2/2.2.2.html">
+            
+                <a href="../../chapter2/2.2/2.2.2.html">
+            
+                    
+                    2.2.2 计算属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../chapter2/2.2/2.2.3.html">
+            
+                <a href="../../chapter2/2.2/2.2.3.html">
+            
+                    
+                    2.2.3 表单控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../chapter2/2.2/2.2.4.html">
+            
+                <a href="../../chapter2/2.2/2.2.4.html">
+            
+                    
+                    2.2.4 Class与Style绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../chapter2/2.3/">
+            
+                <a href="../../chapter2/2.3/">
+            
+                    
+                    2.3 模板渲染
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../chapter2/2.3/2.3.1.html">
+            
+                <a href="../../chapter2/2.3/2.3.1.html">
+            
+                    
+                    2.3.1 前后端渲染对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../chapter2/2.3/2.3.2.html">
+            
+                <a href="../../chapter2/2.3/2.3.2.html">
+            
+                    
+                    2.3.2 条件渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../chapter2/2.3/2.3.3.html">
+            
+                <a href="../../chapter2/2.3/2.3.3.html">
+            
+                    
+                    2.3.3 列表渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../../chapter2/2.3/2.3.4.html">
+            
+                <a href="../../chapter2/2.3/2.3.4.html">
+            
+                    
+                    2.3.4 template标签用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../chapter2/2.4/">
+            
+                <a href="../../chapter2/2.4/">
+            
+                    
+                    2.4 事件绑定与监听
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../chapter2/2.4/2.4.1.html">
+            
+                <a href="../../chapter2/2.4/2.4.1.html">
+            
+                    
+                    2.4.1 方法及内联语句处理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../chapter2/2.4/2.4.2.html">
+            
+                <a href="../../chapter2/2.4/2.4.2.html">
+            
+                    
+                    2.4.2 修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../chapter2/2.4/2.4.3.html">
+            
+                <a href="../../chapter2/2.4/2.4.3.html">
+            
+                    
+                    2.4.3 与传统事件绑定的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../chapter2/2.5/">
+            
+                <a href="../../chapter2/2.5/">
+            
+                    
+                    2.5 Vue.extend()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../chapter3/">
+            
+                <a href="../../chapter3/">
+            
+                    
+                    第 3 章 指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../chapter3/3.1/">
+            
+                <a href="../../chapter3/3.1/">
+            
+                    
+                    3.1 内置指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../chapter3/3.1/3.1.1.html">
+            
+                <a href="../../chapter3/3.1/3.1.1.html">
+            
+                    
+                    3.1.1 v-bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../chapter3/3.1/3.1.2.html">
+            
+                <a href="../../chapter3/3.1/3.1.2.html">
+            
+                    
+                    3.1.2 v-model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../chapter3/3.1/3.1.3.html">
+            
+                <a href="../../chapter3/3.1/3.1.3.html">
+            
+                    
+                    3.1.3 v-if/v-else/v-show
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../chapter3/3.1/3.1.4.html">
+            
+                <a href="../../chapter3/3.1/3.1.4.html">
+            
+                    
+                    3.1.4 v-for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../chapter3/3.1/3.1.5.html">
+            
+                <a href="../../chapter3/3.1/3.1.5.html">
+            
+                    
+                    3.1.5 v-on
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../../chapter3/3.1/3.1.6.html">
+            
+                <a href="../../chapter3/3.1/3.1.6.html">
+            
+                    
+                    3.1.6 v-text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../../chapter3/3.1/3.1.7.html">
+            
+                <a href="../../chapter3/3.1/3.1.7.html">
+            
+                    
+                    3.1.7 v-HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../../chapter3/3.1/3.1.8.html">
+            
+                <a href="../../chapter3/3.1/3.1.8.html">
+            
+                    
+                    3.1.8 v-el
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../../chapter3/3.1/3.1.9.html">
+            
+                <a href="../../chapter3/3.1/3.1.9.html">
+            
+                    
+                    3.1.9 v-ref
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../../chapter3/3.1/3.1.10.html">
+            
+                <a href="../../chapter3/3.1/3.1.10.html">
+            
+                    
+                    3.1.10 v-pre
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../../chapter3/3.1/3.1.11.html">
+            
+                <a href="../../chapter3/3.1/3.1.11.html">
+            
+                    
+                    3.1.11 v-cloak
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../../chapter3/3.1/3.1.12.html">
+            
+                <a href="../../chapter3/3.1/3.1.12.html">
+            
+                    
+                    3.1.12 v-once
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../chapter3/3.2/">
+            
+                <a href="../../chapter3/3.2/">
+            
+                    
+                    3.2 自定义指令基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../chapter3/3.2/3.2.1.html">
+            
+                <a href="../../chapter3/3.2/3.2.1.html">
+            
+                    
+                    3.2.1 指令的注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../chapter3/3.2/3.2.2.html">
+            
+                <a href="../../chapter3/3.2/3.2.2.html">
+            
+                    
+                    3.2.2 指令的定义对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../chapter3/3.2/3.2.3.html">
+            
+                <a href="../../chapter3/3.2/3.2.3.html">
+            
+                    
+                    3.2.3 指令实例属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../chapter3/3.2/3.2.4.html">
+            
+                <a href="../../chapter3/3.2/3.2.4.html">
+            
+                    
+                    3.2.4 元素指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../chapter3/3.3/">
+            
+                <a href="../../chapter3/3.3/">
+            
+                    
+                    3.3 指令的高级选项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../chapter3/3.3/3.3.1.html">
+            
+                <a href="../../chapter3/3.3/3.3.1.html">
+            
+                    
+                    3.3.1 params
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../chapter3/3.3/3.3.2.html">
+            
+                <a href="../../chapter3/3.3/3.3.2.html">
+            
+                    
+                    3.3.2 deep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../chapter3/3.3/3.3.3.html">
+            
+                <a href="../../chapter3/3.3/3.3.3.html">
+            
+                    
+                    3.3.3 twoWay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../chapter3/3.3/3.3.4.html">
+            
+                <a href="../../chapter3/3.3/3.3.4.html">
+            
+                    
+                    3.3.4 acceptStatement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../../chapter3/3.3/3.3.5.html">
+            
+                <a href="../../chapter3/3.3/3.3.5.html">
+            
+                    
+                    3.3.5 terminal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="../../chapter3/3.3/3.3.6.html">
+            
+                <a href="../../chapter3/3.3/3.3.6.html">
+            
+                    
+                    3.3.6 priority
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../chapter3/3.4/">
+            
+                <a href="../../chapter3/3.4/">
+            
+                    
+                    3.4 指令在Vue.js 2.0中的变化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../chapter3/3.4/3.4.1.html">
+            
+                <a href="../../chapter3/3.4/3.4.1.html">
+            
+                    
+                    3.4.1 新的钩子函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../chapter3/3.4/3.4.2.html">
+            
+                <a href="../../chapter3/3.4/3.4.2.html">
+            
+                    
+                    3.4.2 钩子函数实例和参数变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../chapter3/3.4/3.4.3.html">
+            
+                <a href="../../chapter3/3.4/3.4.3.html">
+            
+                    
+                    3.4.3 update函数触发变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../chapter3/3.4/3.4.4.html">
+            
+                <a href="../../chapter3/3.4/3.4.4.html">
+            
+                    
+                    3.4.4 参数binding对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../chapter4/">
+            
+                <a href="../../chapter4/">
+            
+                    
+                    第 4 章 过滤器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../chapter4/4.1/">
+            
+                <a href="../../chapter4/4.1/">
+            
+                    
+                    4.1 过滤器注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../chapter4/4.2/">
+            
+                <a href="../../chapter4/4.2/">
+            
+                    
+                    4.2 双向过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../chapter4/4.3/">
+            
+                <a href="../../chapter4/4.3/">
+            
+                    
+                    4.3 动态参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../chapter4/4.4/">
+            
+                <a href="../../chapter4/4.4/">
+            
+                    
+                    4.4 过滤器在Vue.js 2.0中的变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    第 5 章 过渡
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    5.1 CSS过渡
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1.1" data-path="5.1.1.html">
+            
+                <a href="5.1.1.html">
+            
+                    
+                    5.1.1 CSS过渡的用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="5.1.2.html">
+            
+                <a href="5.1.2.html">
+            
+                    
+                    5.1.2 CSS过渡钩子函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="5.1.3.html">
+            
+                <a href="5.1.3.html">
+            
+                    
+                    5.1.3 显示声明过渡类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="5.1.4.html">
+            
+                <a href="5.1.4.html">
+            
+                    
+                    5.1.4 自定义过渡类名
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5.2/">
+            
+                <a href="../5.2/">
+            
+                    
+                    5.2 JavaScript过渡
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../5.2/5.2.1.html">
+            
+                <a href="../5.2/5.2.1.html">
+            
+                    
+                    5.2.1 Velocity.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../5.2/5.2.2.html">
+            
+                <a href="../5.2/5.2.2.html">
+            
+                    
+                    5.2.2 JavaScript过渡使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../5.3/">
+            
+                <a href="../5.3/">
+            
+                    
+                    5.3 过渡系统在Vue.js 2.0中的变化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../5.3/5.3.1.html">
+            
+                <a href="../5.3/5.3.1.html">
+            
+                    
+                    5.3.1 用法变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../5.3/5.3.2.html">
+            
+                <a href="../5.3/5.3.2.html">
+            
+                    
+                    5.3.2 类名变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../5.3/5.3.3.html">
+            
+                <a href="../5.3/5.3.3.html">
+            
+                    
+                    5.3.3 钩子函数变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.4" data-path="../5.3/5.3.4.html">
+            
+                <a href="../5.3/5.3.4.html">
+            
+                    
+                    5.3.4 transition-group
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../chapter6/">
+            
+                <a href="../../chapter6/">
+            
+                    
+                    第 6 章 组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../chapter6/6.1/">
+            
+                <a href="../../chapter6/6.1/">
+            
+                    
+                    6.1 组件注册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../chapter6/6.1/6.1.1.html">
+            
+                <a href="../../chapter6/6.1/6.1.1.html">
+            
+                    
+                    6.1.1 全局注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../chapter6/6.1/6.1.2.html">
+            
+                <a href="../../chapter6/6.1/6.1.2.html">
+            
+                    
+                    6.1.2 局部注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../chapter6/6.1/6.1.3.html">
+            
+                <a href="../../chapter6/6.1/6.1.3.html">
+            
+                    
+                    6.1.3 注册语法糖
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../chapter6/6.2/">
+            
+                <a href="../../chapter6/6.2/">
+            
+                    
+                    6.2 组件选项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../chapter6/6.2/6.2.1.html">
+            
+                <a href="../../chapter6/6.2/6.2.1.html">
+            
+                    
+                    6.2.1 组件选项中与Vue选项的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../chapter6/6.2/6.2.2.html">
+            
+                <a href="../../chapter6/6.2/6.2.2.html">
+            
+                    
+                    6.2.2 组件Props
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../chapter6/6.3/">
+            
+                <a href="../../chapter6/6.3/">
+            
+                    
+                    6.3 组件间通信
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../../chapter6/6.3/6.3.1.html">
+            
+                <a href="../../chapter6/6.3/6.3.1.html">
+            
+                    
+                    6.3.1 直接访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../../chapter6/6.3/6.3.2.html">
+            
+                <a href="../../chapter6/6.3/6.3.2.html">
+            
+                    
+                    6.3.2 自定义事件监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.3" data-path="../../chapter6/6.3/6.3.3.html">
+            
+                <a href="../../chapter6/6.3/6.3.3.html">
+            
+                    
+                    6.3.3 自定义事件触发机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.4" data-path="../../chapter6/6.3/6.3.4.html">
+            
+                <a href="../../chapter6/6.3/6.3.4.html">
+            
+                    
+                    6.3.4 子组件索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../chapter6/6.4/">
+            
+                <a href="../../chapter6/6.4/">
+            
+                    
+                    6.4 内容分发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../../chapter6/6.4/6.4.1.html">
+            
+                <a href="../../chapter6/6.4/6.4.1.html">
+            
+                    
+                    6.4.1 基础用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../../chapter6/6.4/6.4.2.html">
+            
+                <a href="../../chapter6/6.4/6.4.2.html">
+            
+                    
+                    6.4.2 编译作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../../chapter6/6.4/6.4.3.html">
+            
+                <a href="../../chapter6/6.4/6.4.3.html">
+            
+                    
+                    6.4.3 默认slot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.4" data-path="../../chapter6/6.4/6.4.4.html">
+            
+                <a href="../../chapter6/6.4/6.4.4.html">
+            
+                    
+                    6.4.4 slot属性相同
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.5" data-path="../../chapter6/6.4/6.4.5.html">
+            
+                <a href="../../chapter6/6.4/6.4.5.html">
+            
+                    
+                    6.4.5 Modal实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../chapter6/6.5/">
+            
+                <a href="../../chapter6/6.5/">
+            
+                    
+                    6.5 动态组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1" data-path="../../chapter6/6.5/6.5.1.html">
+            
+                <a href="../../chapter6/6.5/6.5.1.html">
+            
+                    
+                    6.5.1 基础用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.2" data-path="../../chapter6/6.5/6.5.2.html">
+            
+                <a href="../../chapter6/6.5/6.5.2.html">
+            
+                    
+                    6.5.2 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.3" data-path="../../chapter6/6.5/6.5.3.html">
+            
+                <a href="../../chapter6/6.5/6.5.3.html">
+            
+                    
+                    6.5.3 activate钩子函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../chapter6/6.6/">
+            
+                <a href="../../chapter6/6.6/">
+            
+                    
+                    6.6 Vue.js 2.0中的变化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../../chapter6/6.6/6.6.1.html">
+            
+                <a href="../../chapter6/6.6/6.6.1.html">
+            
+                    
+                    6.6.1 event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.2" data-path="../../chapter6/6.6/6.6.2.html">
+            
+                <a href="../../chapter6/6.6/6.6.2.html">
+            
+                    
+                    6.6.2 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.3" data-path="../../chapter6/6.6/6.6.3.html">
+            
+                <a href="../../chapter6/6.6/6.6.3.html">
+            
+                    
+                    6.6.3 slot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.4" data-path="../../chapter6/6.6/6.6.4.html">
+            
+                <a href="../../chapter6/6.6/6.6.4.html">
+            
+                    
+                    6.6.4 refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >5.1.1 CSS过渡的用法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--
+ * @Author: zhanglingdi
+ * @Date: 2019-12-04 14:04:49
+ * @Email: 980583728@qq.com
+ * @Company: Sinovatio
+ * @version: v0.0.1
+ * @LastEditors: zhanglingdi
+ * @LastEditTime: 2019-12-04 14:21:22
+ * @Description: test
+ -->
+<h1 id="511-css&#x8FC7;&#x6E21;&#x7684;&#x7528;&#x6CD5;">5.1.1 CSS&#x8FC7;&#x6E21;&#x7684;&#x7528;&#x6CD5;</h1>
+<p>&#x9996;&#x5148;&#x4E3E;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x8BF4;&#x660E;CSS&#x8FC7;&#x6E21;&#x7CFB;&#x7EDF;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-javascript">&lt;div v-<span class="hljs-keyword">if</span>=<span class="hljs-string">&quot;show&quot;</span> transition=<span class="hljs-string">&quot;my-startup&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+&#x3000;el : <span class="hljs-string">&apos;#app&apos;</span>,
+&#x3000;data: {
+&#x3000;&#x3000;show : <span class="hljs-literal">false</span>
+&#x3000;}
+});
+</code></pre>
+<p>&#x9996;&#x5148;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x7528;transition&#x7ED1;&#x5B9A;&#x4E00;&#x4E2A;DOM&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x4E14;&#x4F7F;&#x7528;v-if&#x6307;&#x4EE4;&#x4F7F;&#x5143;&#x7D20;&#x5148;&#x5904;&#x4E8E;&#x672A;&#x88AB;&#x7F16;&#x8BD1;&#x72B6;&#x6001;&#x3002;&#x7136;&#x540E;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x5185;&#x624B;&#x52A8;&#x8C03;&#x7528;vm.show = true, &#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;DOM&#x5143;&#x7D20;&#x6700;&#x540E;&#x8F93;&#x51FA;&#x4E3A;&#xFF1A;</p>
+<p><code>&lt;div class=&quot;my-startup-transition&quot;&gt;&lt;/div&gt;</code></p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5728;DOM&#x5143;&#x7D20;&#x5B8C;&#x6210;&#x7F16;&#x8BD1;&#x540E;&#xFF0C;&#x8FC7;&#x6E21;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x7ED9;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;my-startup-transition&#x7684;class&#x7C7B;&#x540D;&#x3002;&#x90A3;&#x4E48;&#x4E3A;&#x4E86;&#x8BA9;&#x8FD9;&#x4E2A;&#x6548;&#x679C;&#x66F4;&#x660E;&#x663E;&#x4E00;&#x70B9;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x63D0;&#x524D;&#x7ED9;&#x8FD9;&#x4E2A;&#x7C7B;&#x540D;&#x6DFB;&#x52A0;&#x4E00;&#x70B9;CSS&#x6837;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.my-startup-transition</span> {
+&#x3000;<span class="hljs-attribute">transition</span>: all <span class="hljs-number">1s</span> ease;
+&#x3000;<span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+&#x3000;<span class="hljs-attribute">background</span>: black;
+&#x3000;<span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x518D;&#x91CD;&#x65B0;&#x5237;&#x65B0;&#x5E76;&#x624B;&#x52A8;&#x8FD0;&#x884C;vm.show = true&#xFF0C;&#x53D1;&#x73B0;&#x6700;&#x7EC8;&#x6837;&#x5F0F;&#x6548;&#x679C;&#x662F;&#x52A0;&#x8F7D;&#x4E0A;&#x53BB;&#x4E86;&#xFF0C;&#x4F46;&#x5E76;&#x6CA1;&#x6709;&#x51FA;&#x73B0;transition&#x7684;&#x6548;&#x679C;&#x3002;&#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x5728;&#x7F16;&#x8BD1;v-if&#x540E;&#xFF0C;div&#x76F4;&#x63A5;&#x6302;&#x8F7D;&#x5230;body&#x5E76;&#x6DFB;&#x52A0;my-startup-transition&#x7C7B;&#x540D;&#x8FD9;&#x4E24;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#x6D4F;&#x89C8;&#x5668;&#x4EC5;&#x8FDB;&#x884C;&#x4E86;&#x4E00;&#x6B21;&#x91CD;&#x7ED8;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;div&#x6765;&#x8BF4;&#x5E76;&#x6CA1;&#x6709;&#x4EA7;&#x751F;&#x5C5E;&#x6027;&#x7684;&#x66F4;&#x65B0;&#xFF0C;&#x6240;&#x4EE5;&#x6CA1;&#x6709;&#x6267;&#x884C;css transition&#x7684;&#x6548;&#x679C;&#x3002;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;Vue.js&#x7684;&#x8FC7;&#x6E21;&#x7CFB;&#x7EDF;&#x7ED9;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x53CA;&#x79FB;&#x9664;&#x65F6;&#x5206;&#x522B;&#x6DFB;&#x52A0;&#x4E86;2&#x4E2A;&#x7C7B;&#x540D;&#xFF1A;<em>-enter&#x548C;</em>-leave&#xFF0C;*&#x5373;&#x4E3A;transition&#x7ED1;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x672C;&#x4F8B;&#x4E2D;&#x5373;&#x4E3A;my-startup&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5728;&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4E24;&#x4E2A;&#x7C7B;&#x540D;&#x6837;&#x5F0F;&#xFF0C;&#x5373;my-startup-enter, my-startup-leave:</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.my-startup-enter</span>, <span class="hljs-selector-class">.my-startup-leave</span>{
+&#x3000;<span class="hljs-attribute">height</span>: <span class="hljs-number">0px</span>;
+&#x3000;<span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x518D;&#x91CD;&#x590D;&#x4E4B;&#x524D;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x4E86;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x7C7B;&#x540D;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9700;&#x8981;&#x9AD8;&#x4E8E;.my-startup-transition&#xFF0C;&#x4E0D;&#x7136;&#x88AB;my-startup-transition&#x8986;&#x76D6;&#x540E;&#x5C31;&#x5931;&#x6548;&#x4E86;&#x3002;</p>
+<p>&#x540C;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;CSS&#x7684;animation&#x5C5E;&#x6027;&#x6765;&#x5B9E;&#x73B0;&#x8FC7;&#x6E21;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-css">&lt;style&gt;
+&#x3000;.my-animation-transition {
+&#x3000;&#x3000;animation: increase 1s ease 0s 1;
+&#x3000;&#x3000;width: 100px;
+&#x3000;&#x3000;height: 100px;
+&#x3000;&#x3000;background: black;
+&#x3000;}
+&#x3000;.my-animation-enter, .my-animation-leave {
+&#x3000;&#x3000;height: 0px;
+&#x3000;}
+&#x3000;@keyframes increase {
+&#x3000;&#x3000;from { height: 0px; }
+&#x3000;&#x3000;to { height: 100px; }
+&#x3000;}
+&lt;/style&gt;
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;animation&quot;</span> <span class="hljs-attr">transition</span>=<span class="hljs-string">&quot;my-animation&quot;</span>&gt;</span>animation<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+&#x3000;el : <span class="hljs-string">&apos;#app&apos;</span>,
+&#x3000;data: {
+&#x3000;&#x3000;animation : <span class="hljs-literal">false</span>&#x3000;&#x3000;
+&#x3000;}
+});
+</code></pre>
+<p>&#x540C;&#x6837;&#xFF0C;&#x66F4;&#x6539;vm.animation&#x4E3A;true&#x540E;&#x5373;&#x53EF;&#x770B;&#x5230;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x3002;
+&#x9664;&#x4E86;&#x76F4;&#x63A5;&#x5728;&#x5143;&#x7D20;&#x4E0A;&#x6DFB;&#x52A0;transition=&quot;name&quot;&#x5916;&#xFF0C;Vue.js&#x4E5F;&#x652F;&#x6301;&#x52A8;&#x6001;&#x7ED1;&#x5B9A;CSS&#x540D;&#x79F0;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x5143;&#x7D20;&#x9700;&#x8981;&#x591A;&#x4E2A;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#x7684;&#x573A;&#x666F;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;show&quot;</span> <span class="hljs-attr">v-bind:transition</span>=<span class="hljs-string">&quot; transitionName&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+// &#x4E5F;&#x53EF;&#x4EE5;&#x7B80;&#x5199;&#x6210;
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;show&quot;</span> <span class="hljs-attr">:transition</span>=<span class="hljs-string">&quot;transitionName&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+&#x3000;el: <span class="hljs-string">&apos;#app&apos;</span>,
+&#x3000;data: {
+&#x3000;&#x3000;show: <span class="hljs-literal">false</span>,
+&#x3000;&#x3000;transitionName: <span class="hljs-string">&apos;fade&apos;</span>
+&#x3000;}
+});
+</code></pre>
+<p>Vue.js&#x672C;&#x8EAB;&#x5E76;&#x4E0D;&#x63D0;&#x4F9B;&#x5185;&#x7F6E;&#x7684;&#x8FC7;&#x6E21;CSS&#x6837;&#x5F0F;&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x8FC7;&#x6E21;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x6837;&#x5F0F;&#x7684;&#x52A0;&#x8F7D;&#x6216;&#x79FB;&#x9664;&#x65F6;&#x673A;&#xFF0C;&#x8FD9;&#x6837;&#x66F4;&#x4FBF;&#x4E8E;&#x6211;&#x4EEC;&#x7075;&#x6D3B;&#x5730;&#x6309;&#x9700;&#x53BB;&#x8BBE;&#x8BA1;&#x8FC7;&#x6E21;&#x6837;&#x5F0F;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 5.1 CSS过渡">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5.1.2.html" class="navigation navigation-next " aria-label="Next page: 5.1.2 CSS过渡钩子函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.1.1 CSS过渡的用法","level":"1.6.1.1","depth":3,"next":{"title":"5.1.2 CSS过渡钩子函数","level":"1.6.1.2","depth":3,"path":"chapter5/5.1/5.1.2.md","ref":"chapter5/5.1/5.1.2.md","articles":[]},"previous":{"title":"5.1 CSS过渡","level":"1.6.1","depth":2,"path":"chapter5/5.1/README.md","ref":"chapter5/5.1/README.md","articles":[{"title":"5.1.1 CSS过渡的用法","level":"1.6.1.1","depth":3,"path":"chapter5/5.1/5.1.1.md","ref":"chapter5/5.1/5.1.1.md","articles":[]},{"title":"5.1.2 CSS过渡钩子函数","level":"1.6.1.2","depth":3,"path":"chapter5/5.1/5.1.2.md","ref":"chapter5/5.1/5.1.2.md","articles":[]},{"title":"5.1.3 显示声明过渡类型","level":"1.6.1.3","depth":3,"path":"chapter5/5.1/5.1.3.md","ref":"chapter5/5.1/5.1.3.md","articles":[]},{"title":"5.1.4 自定义过渡类名","level":"1.6.1.4","depth":3,"path":"chapter5/5.1/5.1.4.md","ref":"chapter5/5.1/5.1.4.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/5.1/5.1.1.md","mtime":"2019-12-04T06:21:27.333Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-04T09:07:47.962Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
