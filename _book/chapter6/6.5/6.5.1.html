@@ -1566,6 +1566,90 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../../chapter7/">
+            
+                <a href="../../chapter7/">
+            
+                    
+                    第 7 章 Vue.js常用插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../chapter7/7.1/">
+            
+                <a href="../../chapter7/7.1/">
+            
+                    
+                    7.1 Vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../chapter7/7.2/">
+            
+                <a href="../../chapter7/7.2/">
+            
+                    
+                    7.2 Vue-resource
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../chapter7/7.3/">
+            
+                <a href="../../chapter7/7.3/">
+            
+                    
+                    7.3 Vue-devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../chapter8/">
+            
+                <a href="../../chapter8/">
+            
+                    
+                    第 8 章 Vue.js工程实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../chapter9/">
+            
+                <a href="../../chapter9/">
+            
+                    
+                    第 9 章 状态管理：Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -1612,6 +1696,35 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="651-&#x57FA;&#x7840;&#x7528;&#x6CD5;">6.5.1 &#x57FA;&#x7840;&#x7528;&#x6CD5;</h1>
+<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5207;&#x6362;&#x9875;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#x52A8;&#x6001;&#x7EC4;&#x4EF6;&#x7684;&#x57FA;&#x7840;&#x7528;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript">&lt;div id=&quot;app&quot;&gt;
+&#x3000;// &#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x7EA7;&#x5BFC;&#x822A;&#x680F;&#xFF0C;&#x70B9;&#x51FB;&#x53EF;&#x5207;&#x6362;&#x9875;&#x9762;
+&#x3000;&lt;ul&gt;
+&#x3000;&#x3000;&lt;li @click=&quot;currentView = &apos;home&apos;&quot;&gt;Home&lt;/li&gt;
+&#x3000;&#x3000;&lt;li @click=&quot;currentView = &apos;list&apos;&quot;&gt;List&lt;/li&gt;
+&#x3000;&#x3000;&lt;li @click=&quot;currentView = &apos;detail&apos;&quot;&gt;Detail&lt;/li&gt;
+&#x3000;&lt;/ul&gt;
+&#x3000;&lt;component :is=&quot;currentView&quot;&gt;&lt;/component&gt;
+&lt;/div&gt;
+var vm = new Vue({
+&#x3000;el : &apos;#app&apos;,
+&#x3000;data: {
+&#x3000;&#x3000;currentView: &apos;home&apos;
+&#x3000;},
+&#x3000;components: {
+&#x3000;&#x3000;home: {
+&#x3000;&#x3000;&#x3000;template : &apos;&lt;div&gt;Home&lt;/div&gt;&apos;
+&#x3000;&#x3000;},
+&#x3000;&#x3000;list: {
+&#x3000;&#x3000;&#x3000;&#x3000;template : &apos;&lt;div&gt;List&lt;/div&gt;&apos;
+&#x3000;&#x3000;},
+&#x3000;&#x3000;detail: {
+&#x3000;&#x3000;&#x3000;&#x3000;template : &apos;&lt;div&gt;Detail&lt;/div&gt;&apos;
+&#x3000;&#x3000;}
+&#x3000;}
+});
+</code></pre>
+<p>component&#x6807;&#x7B7E;&#x4E0A;is&#x5C5E;&#x6027;&#x51B3;&#x5B9A;&#x4E86;&#x5F53;&#x524D;&#x91C7;&#x7528;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;:is&#x662F;v-bind:is&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x7ED1;&#x5B9A;&#x4E86;&#x7236;&#x7EC4;&#x4EF6;&#x4E2D;data&#x7684;currentView&#x5C5E;&#x6027;&#x3002;&#x9876;&#x90E8;&#x7684;ul&#x5219;&#x8D77;&#x5230;&#x5BFC;&#x822A;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x70B9;&#x51FB;&#x5373;&#x53EF;&#x4FEE;&#x6539;currentView&#x503C;&#xFF0C;&#x4E5F;&#x5C31;&#x4FEE;&#x6539;component&#x6807;&#x7B7E;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E8B;&#xFF0C;currentView&#x7684;&#x503C;&#x9700;&#x8981;&#x548C;&#x7236;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x4E2D;&#x7684;components&#x5C5E;&#x6027;&#x7684;key&#x76F8;&#x5BF9;&#x5E94;&#x3002;</p>
 
                                 
                                 </section>
@@ -1655,7 +1768,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.5.1 基础用法","level":"1.7.5.1","depth":3,"next":{"title":"6.5.2 keep-alive","level":"1.7.5.2","depth":3,"path":"chapter6/6.5/6.5.2.md","ref":"chapter6/6.5/6.5.2.md","articles":[]},"previous":{"title":"6.5 动态组件","level":"1.7.5","depth":2,"path":"chapter6/6.5/README.md","ref":"chapter6/6.5/README.md","articles":[{"title":"6.5.1 基础用法","level":"1.7.5.1","depth":3,"path":"chapter6/6.5/6.5.1.md","ref":"chapter6/6.5/6.5.1.md","articles":[]},{"title":"6.5.2 keep-alive","level":"1.7.5.2","depth":3,"path":"chapter6/6.5/6.5.2.md","ref":"chapter6/6.5/6.5.2.md","articles":[]},{"title":"6.5.3 activate钩子函数","level":"1.7.5.3","depth":3,"path":"chapter6/6.5/6.5.3.md","ref":"chapter6/6.5/6.5.3.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.5/6.5.1.md","mtime":"2019-12-04T08:19:20.901Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-04T09:07:47.962Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.5.1 基础用法","level":"1.7.5.1","depth":3,"next":{"title":"6.5.2 keep-alive","level":"1.7.5.2","depth":3,"path":"chapter6/6.5/6.5.2.md","ref":"chapter6/6.5/6.5.2.md","articles":[]},"previous":{"title":"6.5 动态组件","level":"1.7.5","depth":2,"path":"chapter6/6.5/README.md","ref":"chapter6/6.5/README.md","articles":[{"title":"6.5.1 基础用法","level":"1.7.5.1","depth":3,"path":"chapter6/6.5/6.5.1.md","ref":"chapter6/6.5/6.5.1.md","articles":[]},{"title":"6.5.2 keep-alive","level":"1.7.5.2","depth":3,"path":"chapter6/6.5/6.5.2.md","ref":"chapter6/6.5/6.5.2.md","articles":[]},{"title":"6.5.3 activate钩子函数","level":"1.7.5.3","depth":3,"path":"chapter6/6.5/6.5.3.md","ref":"chapter6/6.5/6.5.3.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.5/6.5.1.md","mtime":"2019-12-05T06:28:20.774Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T02:15:04.913Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

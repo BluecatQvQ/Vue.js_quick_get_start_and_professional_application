@@ -1566,6 +1566,90 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../../chapter7/">
+            
+                <a href="../../chapter7/">
+            
+                    
+                    第 7 章 Vue.js常用插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../chapter7/7.1/">
+            
+                <a href="../../chapter7/7.1/">
+            
+                    
+                    7.1 Vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../chapter7/7.2/">
+            
+                <a href="../../chapter7/7.2/">
+            
+                    
+                    7.2 Vue-resource
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../chapter7/7.3/">
+            
+                <a href="../../chapter7/7.3/">
+            
+                    
+                    7.3 Vue-devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../chapter8/">
+            
+                <a href="../../chapter8/">
+            
+                    
+                    第 8 章 Vue.js工程实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../chapter9/">
+            
+                <a href="../../chapter9/">
+            
+                    
+                    第 9 章 状态管理：Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -1612,6 +1696,34 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="652-keep-alive">6.5.2 keep-alive</h1>
+<p>component&#x6807;&#x7B7E;&#x63A5;&#x53D7;keep-alive&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5207;&#x6362;&#x51FA;&#x53BB;&#x7684;&#x7EC4;&#x4EF6;&#x4FDD;&#x7559;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x907F;&#x514D;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;component&#x6807;&#x7B7E;&#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<p><code>&lt;component :is=&quot;currentView&quot; keep-alive&gt;&lt;/component&gt;</code></p>
+<p>&#x5E76;&#x4E14;&#x5C06;home&#x7EC4;&#x4EF6;&#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-javascript">home: {
+&#x3000;template : <span class="hljs-string">&apos;&lt;div&gt; \
+&#x3000;&#x3000;&#x3000;&lt;p&gt;Home&lt;/p&gt; \
+&#x3000;&#x3000;&#x3000;&#x3000;&lt;ul&gt; \
+&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&lt;li v-for=&quot;item in items&quot;&gt;{{ item }}&lt;/li&gt; \
+&#x3000;&#x3000;&#x3000;&#x3000;&lt;/ul&gt; \
+&#x3000;&#x3000;&lt;/div&gt;&apos;</span>,
+&#x3000;data : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+&#x3000;&#x3000;<span class="hljs-keyword">return</span> {
+&#x3000;&#x3000;&#x3000;items : []
+&#x3000;&#x3000;}
+&#x3000;},
+&#x3000;ready : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+&#x3000;&#x3000;<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;fetch data&apos;</span>);
+&#x3000;&#x3000;<span class="hljs-keyword">this</span>.items = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+&#x3000;}
+},
+</code></pre>
+<p>&#x5728;keep-alive&#x5C5E;&#x6027;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;home&#x548C;list&#x4E4B;&#x95F4;&#x5207;&#x6362;currentView&#xFF0C;home&#x7EC4;&#x4EF6;&#x7684;ready&#x51FD;&#x6570;&#x53EA;&#x8FD0;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x53EA;&#x8F93;&#x51FA;&#x4E86;&#x4E00;&#x6B21;&#x201C;fetch data&#x201D;&#x3002;&#x800C;&#x5C06;keep-alive&#x5C5E;&#x6027;&#x53BB;&#x9664;&#x540E;&#xFF0C;&#x518D;&#x6B21;&#x5728;home&#x548C;list&#x7EC4;&#x4EF6;&#x95F4;&#x5207;&#x6362;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;&#x6BCF;&#x70B9;&#x51FB;&#x5230;home&#xFF0C;&#x63A7;&#x5236;&#x53F0;&#x90FD;&#x4F1A;&#x8F93;&#x51FA;&#x4E00;&#x6B21;&#x201C;fetch data&#x201D;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8BE5;&#x7279;&#x6027;&#x9002;&#x5F53;&#x5730;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x7684;&#x6027;&#x80FD;&#x4F18;&#x5316;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x5728;&#x6FC0;&#x6D3B;&#x65F6;&#x5E76;&#x4E0D;&#x8981;&#x6C42;&#x6BCF;&#x6B21;&#x90FD;&#x5B9E;&#x65F6;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4F7F;&#x7528;keep-alive&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x4E00;&#x4E9B;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x91CD;&#x590D;&#x6E32;&#x67D3;&#xFF0C;&#x5BFC;&#x81F4;&#x7528;&#x6237;&#x770B;&#x5230;&#x505C;&#x7559;&#x65F6;&#x95F4;&#x8FC7;&#x957F;&#x7684;&#x7A7A;&#x767D;&#x9875;&#x9762;&#x3002;&#x4F46;&#x5982;&#x679C;&#x6BCF;&#x6B21;&#x6FC0;&#x6D3B;&#x7EC4;&#x4EF6;&#x90FD;&#x9700;&#x8981;&#x5411;&#x540E;&#x7AEF;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x4E0D;&#x592A;&#x9002;&#x5408;&#x4F7F;&#x7528;keep-alive&#x5C5E;&#x6027;&#x4E86;&#x3002;</p>
+<p>Vue.js 2.0&#x4E2D;keep-alive&#x5C5E;&#x6027;&#x88AB;&#x4FEE;&#x6539;&#x4E3A;&#x6807;&#x7B7E;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">keep-alive</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">component</span> <span class="hljs-attr">v-bind:is</span>=<span class="hljs-string">&quot;view&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">component</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">keep-alive</span>&gt;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -1655,7 +1767,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.5.2 keep-alive","level":"1.7.5.2","depth":3,"next":{"title":"6.5.3 activate钩子函数","level":"1.7.5.3","depth":3,"path":"chapter6/6.5/6.5.3.md","ref":"chapter6/6.5/6.5.3.md","articles":[]},"previous":{"title":"6.5.1 基础用法","level":"1.7.5.1","depth":3,"path":"chapter6/6.5/6.5.1.md","ref":"chapter6/6.5/6.5.1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.5/6.5.2.md","mtime":"2019-12-04T08:19:20.901Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-04T09:07:47.962Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.5.2 keep-alive","level":"1.7.5.2","depth":3,"next":{"title":"6.5.3 activate钩子函数","level":"1.7.5.3","depth":3,"path":"chapter6/6.5/6.5.3.md","ref":"chapter6/6.5/6.5.3.md","articles":[]},"previous":{"title":"6.5.1 基础用法","level":"1.7.5.1","depth":3,"path":"chapter6/6.5/6.5.1.md","ref":"chapter6/6.5/6.5.1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.5/6.5.2.md","mtime":"2019-12-05T06:33:22.545Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T02:15:04.913Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1566,6 +1566,90 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../../chapter7/">
+            
+                <a href="../../chapter7/">
+            
+                    
+                    第 7 章 Vue.js常用插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../chapter7/7.1/">
+            
+                <a href="../../chapter7/7.1/">
+            
+                    
+                    7.1 Vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../chapter7/7.2/">
+            
+                <a href="../../chapter7/7.2/">
+            
+                    
+                    7.2 Vue-resource
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../chapter7/7.3/">
+            
+                <a href="../../chapter7/7.3/">
+            
+                    
+                    7.3 Vue-devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../chapter8/">
+            
+                <a href="../../chapter8/">
+            
+                    
+                    第 8 章 Vue.js工程实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../chapter9/">
+            
+                <a href="../../chapter9/">
+            
+                    
+                    第 9 章 状态管理：Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -1612,6 +1696,125 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="633-&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x673A;&#x5236;">6.3.3 &#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x673A;&#x5236;</h1>
+<p>&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x540E;&#xFF0C;&#x4E0B;&#x9762;&#x6765;&#x770B;&#x4E0B;Vue.js&#x7684;&#x89E6;&#x53D1;&#x673A;&#x5236;&#x3002;</p>
+<ol>
+<li><p>$emit<br> &#x5728;&#x5B9E;&#x4F8B;&#x672C;&#x8EAB;&#x4E0A;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"> events : {
+ &#x3000;<span class="hljs-string">&apos;add&apos;</span> : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+ &#x3000;&#x3000;<span class="hljs-keyword">this</span>.todo.push(msg);
+ &#x3000;}
+ }
+ methods: {
+ &#x3000;onClick : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+ &#x3000;&#x3000;<span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&apos;add&apos;</span>, <span class="hljs-string">&apos;there is a message&apos;</span>);<span class="hljs-comment">// &#x5373;&#x53EF;&#x89E6;&#x53D1;events&#x4E2D;&#x7684;add&#x51FD;&#x6570;</span>
+ &#x3000;}
+ }
+</code></pre>
+</li>
+<li><p>$dispatch<br> &#x6D3E;&#x53D1;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E8B;&#x4EF6;&#x6CBF;&#x7740;&#x7236;&#x94FE;&#x5192;&#x6CE1;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x4E4B;&#x540E;&#x81EA;&#x52A8;&#x505C;&#x6B62;&#x5192;&#x6CE1;&#xFF0C;&#x9664;&#x975E;&#x89E6;&#x53D1;&#x51FD;&#x6570;&#x660E;&#x786E;&#x8FD4;&#x56DE;true&#xFF0C;&#x624D;&#x4F1A;&#x7EE7;&#x7EED;&#x5411;&#x4E0A;&#x5192;&#x6CE1;&#x3002;</p>
+<p> &#x7236;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-javascript"> events : {
+ &#x3000;<span class="hljs-string">&apos;add&apos;</span> : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+ &#x3000;&#x3000;<span class="hljs-keyword">this</span>.todo.push(msg);
+ &#x3000;&#x3000;<span class="hljs-comment">// return true&#x3000;&#x660E;&#x786E;&#x8FD4;&#x56DE;true&#x540E;&#xFF0C;&#x4E8B;&#x4EF6;&#x4F1A;&#x7EE7;&#x7EED;&#x5411;&#x4E0A;&#x5192;&#x6CE1;</span>
+ &#x3000;}
+ }
+</code></pre>
+<p> &#x5B50;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-javascript"> methods: {
+ &#x3000;toParent : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+ &#x3000;&#x3000;<span class="hljs-keyword">this</span>.$dispatch(<span class="hljs-string">&apos;add&apos;</span>, <span class="hljs-string">&apos;message from child&apos;</span>);
+ &#x3000;}
+ }
+</code></pre>
+<p> &#x8C03;&#x7528;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;toParent()&#x51FD;&#x6570;&#xFF0C;&#x5373;&#x53EF;&#x5411;&#x4E0A;&#x5192;&#x6CE1;&#xFF0C;&#x89E6;&#x53D1;&#x7236;&#x7EC4;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x597D;&#x7684;add&#x4E8B;&#x4EF6;&#x3002;</p>
+</li>
+<li><p>$broadcast<br> &#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E8B;&#x4EF6;&#x4F1A;&#x5411;&#x4E0B;&#x4F20;&#x9012;&#x7ED9;&#x6240;&#x6709;&#x7684;&#x540E;&#x4EE3;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<p> &#x7236;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-javascript"> methods: {
+ &#x3000;toChild : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+ &#x3000;&#x3000;<span class="hljs-keyword">this</span>.$dispatch(<span class="hljs-string">&apos;msg&apos;</span>, <span class="hljs-string">&apos;message from parent&apos;</span>);
+ &#x3000;}
+ }
+</code></pre>
+<p> &#x5B50;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-javascript"> events : {
+ &#x3000;<span class="hljs-string">&apos;msg&apos;</span> : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+ &#x3000;&#x3000;alert(msg);
+ &#x3000;}
+ }
+</code></pre>
+</li>
+</ol>
+<p>&#x4E0B;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x9A8C;&#x8BC1;&#x8FD9;&#x4E09;&#x79CD;&#x89E6;&#x53D1;&#x673A;&#x5236;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;addTodo&quot;</span>&gt;</span>&#x6DFB;&#x52A0;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;broadcast&quot;</span>&gt;</span>&#x5E7F;&#x64AD;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">child-todo</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;one&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">child-todo</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">child-todo</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;two&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">child-todo</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+&#x3000;&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;value in todo&quot;</span>&gt;</span>
+&#x3000;&#x3000;&#x3000;&#x3000;{{ value }}
+&#x3000;&#x3000;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>// &#x5B50;&#x7EC4;&#x4EF6;</p>
+<pre><code class="lang-javascript">Vue.component(<span class="hljs-string">&apos;child-todo&apos;</span>, {
+&#x3000;props : [<span class="hljs-string">&apos;name&apos;</span>],
+&#x3000;data : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+&#x3000;&#x3000;<span class="hljs-keyword">return</span> {
+&#x3000;&#x3000;&#x3000;&#x3000;content : <span class="hljs-string">&apos;&apos;</span>
+&#x3000;&#x3000;}
+&#x3000;},
+&#x3000;template : <span class="hljs-string">&apos;&lt;div&gt;\
+&#x3000;&#x3000;&#x3000;&#x3000;Child {{name}} \
+&#x3000;&#x3000;&#x3000;&#x3000;&lt;input type=&quot;text&quot; v-model=&quot;content&quot;/&gt; \
+&#x3000;&#x3000;&#x3000;&#x3000;&lt;button @click=&quot;add&quot;&gt;&#x6DFB;&#x52A0;&lt;/button&gt; \
+&#x3000;&#x3000;&lt;/div&gt;&apos;</span>,
+&#x3000;methods : {
+&#x3000;&#x3000;add : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-comment">// &#x5C06;&#x4E8B;&#x4EF6;&#x5411;&#x4E0A;&#x6D3E;&#x53D1;&#xFF0C;&#x8FD9;&#x6837;&#x65E2;&#x4FEE;&#x6539;&#x4E86;&#x7236;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;todo&#x5C5E;&#x6027;&#xFF0C;&#x53C8;&#x4E0D;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x7236;&#x7EC4;&#x4EF6;</span>
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">this</span>.$dispatch(<span class="hljs-string">&apos;add&apos;</span>, <span class="hljs-string">&apos;Child &apos;</span> + <span class="hljs-keyword">this</span>.name + <span class="hljs-string">&apos;: &apos;</span> + <span class="hljs-keyword">this</span>.content);
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">this</span>.content = <span class="hljs-string">&apos;&apos;</span>;
+&#x3000;&#x3000;}
+&#x3000;},
+&#x3000;events : {
+&#x3000;&#x3000;<span class="hljs-comment">// &#x7528;&#x4E8E;&#x63A5;&#x6536;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x5E7F;&#x64AD;</span>
+&#x3000;&#x3000;<span class="hljs-string">&apos;to-child&apos;</span> : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">this</span>.$dispatch(<span class="hljs-string">&apos;add&apos;</span>, <span class="hljs-string">&apos;Child &apos;</span> + <span class="hljs-keyword">this</span>.name + <span class="hljs-string">&apos;: &apos;</span> + msg);
+&#x3000;&#x3000;}
+&#x3000;}
+});
+</code></pre>
+<p>// &#x6839;&#x5B9E;&#x4F8B;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+&#x3000;el : <span class="hljs-string">&apos;#app&apos;</span>,
+&#x3000;data : {
+&#x3000;&#x3000;todo : [],
+&#x3000;&#x3000;content : <span class="hljs-string">&apos;&apos;</span>
+&#x3000;},
+&#x3000;methods : {
+&#x3000;&#x3000;addTodo : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-comment">// &#x89E6;&#x53D1;&#x81EA;&#x5DF1;&#x5B9E;&#x4F8B;&#x4E2D;&#x7684;&#x4E8B;&#x4EF6;</span>
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&apos;add&apos;</span>, <span class="hljs-string">&apos;Parent: &apos;</span> + <span class="hljs-keyword">this</span>.content);
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">this</span>.content = <span class="hljs-string">&apos;&apos;</span>;
+&#x3000;&#x3000;},
+&#x3000;&#x3000;broadcast : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-comment">// &#x5C06;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#xFF0C;&#x4F7F;&#x4E24;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x90FD;&#x89E6;&#x53D1;to-child&#x4E8B;&#x4EF6;</span>
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">this</span>.$broadcast(<span class="hljs-string">&apos;to-child&apos;</span>, <span class="hljs-keyword">this</span>.content);
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">this</span>.content = <span class="hljs-string">&apos;&apos;</span>;
+&#x3000;&#x3000;}
+&#x3000;},
+&#x3000;events : {
+&#x3000;&#x3000;<span class="hljs-string">&apos;add&apos;</span> : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{
+&#x3000;&#x3000;&#x3000;&#x3000;<span class="hljs-keyword">this</span>.todo.push(msg);
+&#x3000;&#x3000;}
+&#x3000;}
+});
+</code></pre>
+<p>&#x5728;&#x6839;&#x5B9E;&#x4F8B;&#x7684;input&#x4E2D;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x201C;Hello&#x201D;&#xFF0C;&#x70B9;&#x51FB;&#x201C;&#x6DFB;&#x52A0;&#x201D;&#xFF0C; &#x5373;&#x4F1A;&#x5728;&#x7ED1;&#x5B9A;v-for&#x6307;&#x4EE4;&#x7684;li&#x6807;&#x7B7E;&#x4E2D;&#x8F93;&#x51FA;&#x201C;Parent&#xFF1A;Hello&#x201D;&#xFF1B;&#x6216;&#x70B9;&#x51FB;&#x201C;&#x5E7F;&#x64AD;&#x201D;&#xFF0C;&#x5219;&#x4F1A;&#x8F93;&#x51FA;&#x201C;Child one: hello&#x201D;&#x548C;&#x201C;Child two: hello&#x201D;&#x4E24;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x672C;&#x8D28;&#x5C31;&#x662F;&#x5E7F;&#x64AD;&#x4E86;&#x4E8B;&#x4EF6;to-child&#xFF0C;&#x4E24;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#x63A5;&#x53D7;&#x540E;&#x89E6;&#x53D1;&#x4E86;&#x76D1;&#x542C;&#x51FD;&#x6570;&#xFF0C;&#x5C06;&#x5185;&#x5BB9;&#x548C;&#x7EC4;&#x4EF6;name&#x53C2;&#x6570;&#x6DFB;&#x52A0;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#x7684;todo&#x6570;&#x7EC4;&#x4E2D;&#x3002;</p>
 
                                 
                                 </section>
@@ -1655,7 +1858,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.3.3 自定义事件触发机制","level":"1.7.3.3","depth":3,"next":{"title":"6.3.4 子组件索引","level":"1.7.3.4","depth":3,"path":"chapter6/6.3/6.3.4.md","ref":"chapter6/6.3/6.3.4.md","articles":[]},"previous":{"title":"6.3.2 自定义事件监听","level":"1.7.3.2","depth":3,"path":"chapter6/6.3/6.3.2.md","ref":"chapter6/6.3/6.3.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.3/6.3.3.md","mtime":"2019-12-04T08:19:20.886Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-04T09:07:47.962Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.3.3 自定义事件触发机制","level":"1.7.3.3","depth":3,"next":{"title":"6.3.4 子组件索引","level":"1.7.3.4","depth":3,"path":"chapter6/6.3/6.3.4.md","ref":"chapter6/6.3/6.3.4.md","articles":[]},"previous":{"title":"6.3.2 自定义事件监听","level":"1.7.3.2","depth":3,"path":"chapter6/6.3/6.3.2.md","ref":"chapter6/6.3/6.3.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.3/6.3.3.md","mtime":"2019-12-05T03:27:34.383Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T02:15:04.913Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1566,6 +1566,90 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../../chapter7/">
+            
+                <a href="../../chapter7/">
+            
+                    
+                    第 7 章 Vue.js常用插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../chapter7/7.1/">
+            
+                <a href="../../chapter7/7.1/">
+            
+                    
+                    7.1 Vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../chapter7/7.2/">
+            
+                <a href="../../chapter7/7.2/">
+            
+                    
+                    7.2 Vue-resource
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../chapter7/7.3/">
+            
+                <a href="../../chapter7/7.3/">
+            
+                    
+                    7.3 Vue-devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../chapter8/">
+            
+                <a href="../../chapter8/">
+            
+                    
+                    第 8 章 Vue.js工程实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../chapter9/">
+            
+                <a href="../../chapter9/">
+            
+                    
+                    第 9 章 状态管理：Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -1612,6 +1696,33 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="653-activate&#x94A9;&#x5B50;&#x51FD;&#x6570;">6.5.3 activate&#x94A9;&#x5B50;&#x51FD;&#x6570;</h1>
+<p>Vue.js&#x7ED9;&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B;&#x4E86;activate&#x94A9;&#x5B50;&#x51FD;&#x6570;&#xFF0C;&#x4F5C;&#x7528;&#x4E8E;&#x52A8;&#x6001;&#x7EC4;&#x4EF6;&#x5207;&#x6362;&#x6216;&#x8005;&#x9759;&#x6001;&#x7EC4;&#x4EF6;&#x521D;&#x59CB;&#x5316;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x3002;activate&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x505A;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x540E;&#x7EC4;&#x4EF6;&#x624D;&#x8FDB;&#x884C;&#x4E4B;&#x540E;&#x7684;&#x6E32;&#x67D3;&#x8FC7;&#x7A0B;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;home&#x7EC4;&#x4EF6;&#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-javascript">home: {
+&#x3000;template : <span class="hljs-string">&apos;&lt;div&gt; \
+&#x3000;&#x3000;&lt;p&gt;Home&lt;/p&gt; \
+&#x3000;&#x3000;&lt;ul&gt; \
+&#x3000;&#x3000;&#x3000;&#x3000;&lt;li v-for=&quot;item in items&quot;&gt;{{ item }}&lt;/li&gt; \
+&#x3000;&#x3000;&lt;/ul&gt; \
+&#x3000;&lt;/div&gt;&apos;</span>,
+&#x3000;data : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+&#x3000;&#x3000;<span class="hljs-keyword">return</span> {
+&#x3000;&#x3000;&#x3000;&#x3000;items : []
+&#x3000;&#x3000;}
+&#x3000;},
+&#x3000;activate : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">done</span>) </span>{
+&#x3000;&#x3000;<span class="hljs-keyword">var</span> that = <span class="hljs-keyword">this</span>;
+&#x3000;&#x3000;<span class="hljs-comment">// &#x6B64;&#x5904;&#x7684;setTimeout&#x7528;&#x4E8E;&#x6A21;&#x62DF;&#x6B63;&#x5F0F;&#x4E1A;&#x52A1;&#x4E2D;&#x7684;ajax&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x6570;&#x636E;</span>
+&#x3000;&#x3000;setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+&#x3000;&#x3000;&#x3000;&#x3000;that.items = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+&#x3000;&#x3000;&#x3000;&#x3000;done();
+&#x3000;&#x3000;}, <span class="hljs-number">1000</span>);
+&#x3000;}
+}
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;component&#x4F5C;&#x4E3A;&#x5BF9;&#x6BD4;&#xFF0C;&#x5E76;&#x8BBE;&#x5B9A;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x4E3A;keep-alive&#xFF1A;</p>
+<p><code>&lt;component :is=&quot;currentView&quot;&gt;&lt;/component&gt;</code> </p>
+<p><code>&lt;component :is=&quot;currentView&quot; keep-alive&gt;&lt;/component&gt;</code></p>
+<p>&#x53EF;&#x4EE5;&#x5BF9;&#x6BD4;&#x51FA;&#xFF0C;&#x518D;&#x6B21;&#x6FC0;&#x6D3B;home&#x540E;&#xFF0C;&#x672A;&#x4F7F;&#x7528;keep-alive&#x7684;component&#x4F1A;&#x5EF6;&#x8FDF;1s&#x7684;&#x65F6;&#x95F4;&#x624D;&#x6E32;&#x67D3;&#x51FA;&#x5217;&#x8868;&#x3002;</p>
 
                                 
                                 </section>
@@ -1655,7 +1766,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.5.3 activate钩子函数","level":"1.7.5.3","depth":3,"next":{"title":"6.6 Vue.js 2.0中的变化","level":"1.7.6","depth":2,"path":"chapter6/6.6/README.md","ref":"chapter6/6.6/README.md","articles":[{"title":"6.6.1 event","level":"1.7.6.1","depth":3,"path":"chapter6/6.6/6.6.1.md","ref":"chapter6/6.6/6.6.1.md","articles":[]},{"title":"6.6.2 keep-alive","level":"1.7.6.2","depth":3,"path":"chapter6/6.6/6.6.2.md","ref":"chapter6/6.6/6.6.2.md","articles":[]},{"title":"6.6.3 slot","level":"1.7.6.3","depth":3,"path":"chapter6/6.6/6.6.3.md","ref":"chapter6/6.6/6.6.3.md","articles":[]},{"title":"6.6.4 refs","level":"1.7.6.4","depth":3,"path":"chapter6/6.6/6.6.4.md","ref":"chapter6/6.6/6.6.4.md","articles":[]}]},"previous":{"title":"6.5.2 keep-alive","level":"1.7.5.2","depth":3,"path":"chapter6/6.5/6.5.2.md","ref":"chapter6/6.5/6.5.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.5/6.5.3.md","mtime":"2019-12-04T08:19:20.917Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-04T09:07:47.962Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.5.3 activate钩子函数","level":"1.7.5.3","depth":3,"next":{"title":"6.6 Vue.js 2.0中的变化","level":"1.7.6","depth":2,"path":"chapter6/6.6/README.md","ref":"chapter6/6.6/README.md","articles":[{"title":"6.6.1 event","level":"1.7.6.1","depth":3,"path":"chapter6/6.6/6.6.1.md","ref":"chapter6/6.6/6.6.1.md","articles":[]},{"title":"6.6.2 keep-alive","level":"1.7.6.2","depth":3,"path":"chapter6/6.6/6.6.2.md","ref":"chapter6/6.6/6.6.2.md","articles":[]},{"title":"6.6.3 slot","level":"1.7.6.3","depth":3,"path":"chapter6/6.6/6.6.3.md","ref":"chapter6/6.6/6.6.3.md","articles":[]},{"title":"6.6.4 refs","level":"1.7.6.4","depth":3,"path":"chapter6/6.6/6.6.4.md","ref":"chapter6/6.6/6.6.4.md","articles":[]}]},"previous":{"title":"6.5.2 keep-alive","level":"1.7.5.2","depth":3,"path":"chapter6/6.5/6.5.2.md","ref":"chapter6/6.5/6.5.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.5/6.5.3.md","mtime":"2019-12-05T06:56:06.844Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T02:15:04.913Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

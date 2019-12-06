@@ -1566,6 +1566,90 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../../chapter7/">
+            
+                <a href="../../chapter7/">
+            
+                    
+                    第 7 章 Vue.js常用插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../chapter7/7.1/">
+            
+                <a href="../../chapter7/7.1/">
+            
+                    
+                    7.1 Vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../chapter7/7.2/">
+            
+                <a href="../../chapter7/7.2/">
+            
+                    
+                    7.2 Vue-resource
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../chapter7/7.3/">
+            
+                <a href="../../chapter7/7.3/">
+            
+                    
+                    7.3 Vue-devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../chapter8/">
+            
+                <a href="../../chapter8/">
+            
+                    
+                    第 8 章 Vue.js工程实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../chapter9/">
+            
+                <a href="../../chapter9/">
+            
+                    
+                    第 9 章 状态管理：Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -1612,6 +1696,23 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="644-slot&#x5C5E;&#x6027;&#x76F8;&#x540C;">6.4.4 slot&#x5C5E;&#x6027;&#x76F8;&#x540C;</h1>
+<p>&#x5728;&#x7236;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x76F8;&#x540C;slot&#x5C5E;&#x6027;&#x7684;DOM&#x6807;&#x7B7E;&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x4F9D;&#x6B21;&#x63D2;&#x5165;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;slot&#x6807;&#x7B7E;&#x4E2D;&#xFF0C;&#x4EE5;&#x5144;&#x5F1F;&#x8282;&#x70B9;&#x7684;&#x65B9;&#x5F0F;&#x5448;&#x73B0;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x4E0A;&#x4F8B;&#x4E2D;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x4F8B;&#x6A21;&#x677F;&#x6539;&#x6210;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">my-slot</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>{{ title + &apos;1&apos;}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>{{ title + &apos;2&apos;}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>{{ content }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">my-slot</span>&gt;</span>
+// &#x8F93;&#x51FA;&#x7ED3;&#x679C;
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>
+&#x3000;&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>This is a title1<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+&#x3000;&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>This is a title2<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>&#x3000;&#x3000;&#x3000;&#x3000;
+&#x3000;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>
+&#x3000;&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>This is the content<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+&#x3000;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -1655,7 +1756,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.4.4 slot属性相同","level":"1.7.4.4","depth":3,"next":{"title":"6.4.5 Modal实例","level":"1.7.4.5","depth":3,"path":"chapter6/6.4/6.4.5.md","ref":"chapter6/6.4/6.4.5.md","articles":[]},"previous":{"title":"6.4.3 默认slot","level":"1.7.4.3","depth":3,"path":"chapter6/6.4/6.4.3.md","ref":"chapter6/6.4/6.4.3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.4/6.4.4.md","mtime":"2019-12-04T08:19:20.901Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-04T09:07:47.962Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.4.4 slot属性相同","level":"1.7.4.4","depth":3,"next":{"title":"6.4.5 Modal实例","level":"1.7.4.5","depth":3,"path":"chapter6/6.4/6.4.5.md","ref":"chapter6/6.4/6.4.5.md","articles":[]},"previous":{"title":"6.4.3 默认slot","level":"1.7.4.3","depth":3,"path":"chapter6/6.4/6.4.3.md","ref":"chapter6/6.4/6.4.3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.4/6.4.4.md","mtime":"2019-12-05T06:08:43.455Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T02:15:04.913Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -103,4 +103,10 @@
         * [6.6.2 keep-alive](chapter6/6.6/6.6.2.md)
         * [6.6.3 slot](chapter6/6.6/6.6.3.md)
         * [6.6.4 refs](chapter6/6.6/6.6.4.md)
+* [第 7 章 Vue.js常用插件](chapter7/README.md)
+    * [7.1 Vue-router](chapter7/7.1/README.md)
+    * [7.2 Vue-resource](chapter7/7.2/README.md)
+    * [7.3 Vue-devtools](chapter7/7.3/README.md)
+* [第 8 章 Vue.js工程实例](chapter8/README.md)
+* [第 9 章 状态管理：Vuex](chapter9/README.md)
 

@@ -1,0 +1,2146 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第 9 章 状态管理：Vuex · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../chapter8/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    第 1 章 Vue.js简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/1.1.html">
+            
+                <a href="../chapter1/1.1.html">
+            
+                    
+                    1.1 Vue.js是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/1.2.html">
+            
+                <a href="../chapter1/1.2.html">
+            
+                    
+                    1.2 Vue.js的Hello world
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    第 2 章 基础特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/2.1/">
+            
+                <a href="../chapter2/2.1/">
+            
+                    
+                    2.1 实列及选项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../chapter2/2.1/2.1.1.html">
+            
+                <a href="../chapter2/2.1/2.1.1.html">
+            
+                    
+                    2.1.1 模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../chapter2/2.1/2.1.2.html">
+            
+                <a href="../chapter2/2.1/2.1.2.html">
+            
+                    
+                    2.1.2 数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../chapter2/2.1/2.1.3.html">
+            
+                <a href="../chapter2/2.1/2.1.3.html">
+            
+                    
+                    2.1.3 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../chapter2/2.1/2.1.4.html">
+            
+                <a href="../chapter2/2.1/2.1.4.html">
+            
+                    
+                    2.1.4 生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/2.2/">
+            
+                <a href="../chapter2/2.2/">
+            
+                    
+                    2.2 数据绑定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../chapter2/2.2/2.2.1.html">
+            
+                <a href="../chapter2/2.2/2.2.1.html">
+            
+                    
+                    2.2.1 数据绑定语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../chapter2/2.2/2.2.2.html">
+            
+                <a href="../chapter2/2.2/2.2.2.html">
+            
+                    
+                    2.2.2 计算属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../chapter2/2.2/2.2.3.html">
+            
+                <a href="../chapter2/2.2/2.2.3.html">
+            
+                    
+                    2.2.3 表单控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../chapter2/2.2/2.2.4.html">
+            
+                <a href="../chapter2/2.2/2.2.4.html">
+            
+                    
+                    2.2.4 Class与Style绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/2.3/">
+            
+                <a href="../chapter2/2.3/">
+            
+                    
+                    2.3 模板渲染
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../chapter2/2.3/2.3.1.html">
+            
+                <a href="../chapter2/2.3/2.3.1.html">
+            
+                    
+                    2.3.1 前后端渲染对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../chapter2/2.3/2.3.2.html">
+            
+                <a href="../chapter2/2.3/2.3.2.html">
+            
+                    
+                    2.3.2 条件渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../chapter2/2.3/2.3.3.html">
+            
+                <a href="../chapter2/2.3/2.3.3.html">
+            
+                    
+                    2.3.3 列表渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../chapter2/2.3/2.3.4.html">
+            
+                <a href="../chapter2/2.3/2.3.4.html">
+            
+                    
+                    2.3.4 template标签用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/2.4/">
+            
+                <a href="../chapter2/2.4/">
+            
+                    
+                    2.4 事件绑定与监听
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../chapter2/2.4/2.4.1.html">
+            
+                <a href="../chapter2/2.4/2.4.1.html">
+            
+                    
+                    2.4.1 方法及内联语句处理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../chapter2/2.4/2.4.2.html">
+            
+                <a href="../chapter2/2.4/2.4.2.html">
+            
+                    
+                    2.4.2 修饰符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../chapter2/2.4/2.4.3.html">
+            
+                <a href="../chapter2/2.4/2.4.3.html">
+            
+                    
+                    2.4.3 与传统事件绑定的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/2.5/">
+            
+                <a href="../chapter2/2.5/">
+            
+                    
+                    2.5 Vue.extend()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    第 3 章 指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/3.1/">
+            
+                <a href="../chapter3/3.1/">
+            
+                    
+                    3.1 内置指令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../chapter3/3.1/3.1.1.html">
+            
+                <a href="../chapter3/3.1/3.1.1.html">
+            
+                    
+                    3.1.1 v-bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../chapter3/3.1/3.1.2.html">
+            
+                <a href="../chapter3/3.1/3.1.2.html">
+            
+                    
+                    3.1.2 v-model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../chapter3/3.1/3.1.3.html">
+            
+                <a href="../chapter3/3.1/3.1.3.html">
+            
+                    
+                    3.1.3 v-if/v-else/v-show
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../chapter3/3.1/3.1.4.html">
+            
+                <a href="../chapter3/3.1/3.1.4.html">
+            
+                    
+                    3.1.4 v-for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../chapter3/3.1/3.1.5.html">
+            
+                <a href="../chapter3/3.1/3.1.5.html">
+            
+                    
+                    3.1.5 v-on
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../chapter3/3.1/3.1.6.html">
+            
+                <a href="../chapter3/3.1/3.1.6.html">
+            
+                    
+                    3.1.6 v-text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../chapter3/3.1/3.1.7.html">
+            
+                <a href="../chapter3/3.1/3.1.7.html">
+            
+                    
+                    3.1.7 v-HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../chapter3/3.1/3.1.8.html">
+            
+                <a href="../chapter3/3.1/3.1.8.html">
+            
+                    
+                    3.1.8 v-el
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../chapter3/3.1/3.1.9.html">
+            
+                <a href="../chapter3/3.1/3.1.9.html">
+            
+                    
+                    3.1.9 v-ref
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../chapter3/3.1/3.1.10.html">
+            
+                <a href="../chapter3/3.1/3.1.10.html">
+            
+                    
+                    3.1.10 v-pre
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../chapter3/3.1/3.1.11.html">
+            
+                <a href="../chapter3/3.1/3.1.11.html">
+            
+                    
+                    3.1.11 v-cloak
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../chapter3/3.1/3.1.12.html">
+            
+                <a href="../chapter3/3.1/3.1.12.html">
+            
+                    
+                    3.1.12 v-once
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/3.2/">
+            
+                <a href="../chapter3/3.2/">
+            
+                    
+                    3.2 自定义指令基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../chapter3/3.2/3.2.1.html">
+            
+                <a href="../chapter3/3.2/3.2.1.html">
+            
+                    
+                    3.2.1 指令的注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../chapter3/3.2/3.2.2.html">
+            
+                <a href="../chapter3/3.2/3.2.2.html">
+            
+                    
+                    3.2.2 指令的定义对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../chapter3/3.2/3.2.3.html">
+            
+                <a href="../chapter3/3.2/3.2.3.html">
+            
+                    
+                    3.2.3 指令实例属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../chapter3/3.2/3.2.4.html">
+            
+                <a href="../chapter3/3.2/3.2.4.html">
+            
+                    
+                    3.2.4 元素指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/3.3/">
+            
+                <a href="../chapter3/3.3/">
+            
+                    
+                    3.3 指令的高级选项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../chapter3/3.3/3.3.1.html">
+            
+                <a href="../chapter3/3.3/3.3.1.html">
+            
+                    
+                    3.3.1 params
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../chapter3/3.3/3.3.2.html">
+            
+                <a href="../chapter3/3.3/3.3.2.html">
+            
+                    
+                    3.3.2 deep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../chapter3/3.3/3.3.3.html">
+            
+                <a href="../chapter3/3.3/3.3.3.html">
+            
+                    
+                    3.3.3 twoWay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../chapter3/3.3/3.3.4.html">
+            
+                <a href="../chapter3/3.3/3.3.4.html">
+            
+                    
+                    3.3.4 acceptStatement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../chapter3/3.3/3.3.5.html">
+            
+                <a href="../chapter3/3.3/3.3.5.html">
+            
+                    
+                    3.3.5 terminal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="../chapter3/3.3/3.3.6.html">
+            
+                <a href="../chapter3/3.3/3.3.6.html">
+            
+                    
+                    3.3.6 priority
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/3.4/">
+            
+                <a href="../chapter3/3.4/">
+            
+                    
+                    3.4 指令在Vue.js 2.0中的变化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../chapter3/3.4/3.4.1.html">
+            
+                <a href="../chapter3/3.4/3.4.1.html">
+            
+                    
+                    3.4.1 新的钩子函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../chapter3/3.4/3.4.2.html">
+            
+                <a href="../chapter3/3.4/3.4.2.html">
+            
+                    
+                    3.4.2 钩子函数实例和参数变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../chapter3/3.4/3.4.3.html">
+            
+                <a href="../chapter3/3.4/3.4.3.html">
+            
+                    
+                    3.4.3 update函数触发变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../chapter3/3.4/3.4.4.html">
+            
+                <a href="../chapter3/3.4/3.4.4.html">
+            
+                    
+                    3.4.4 参数binding对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    第 4 章 过滤器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/4.1/">
+            
+                <a href="../chapter4/4.1/">
+            
+                    
+                    4.1 过滤器注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/4.2/">
+            
+                <a href="../chapter4/4.2/">
+            
+                    
+                    4.2 双向过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/4.3/">
+            
+                <a href="../chapter4/4.3/">
+            
+                    
+                    4.3 动态参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/4.4/">
+            
+                <a href="../chapter4/4.4/">
+            
+                    
+                    4.4 过滤器在Vue.js 2.0中的变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    第 5 章 过渡
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/5.1/">
+            
+                <a href="../chapter5/5.1/">
+            
+                    
+                    5.1 CSS过渡
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../chapter5/5.1/5.1.1.html">
+            
+                <a href="../chapter5/5.1/5.1.1.html">
+            
+                    
+                    5.1.1 CSS过渡的用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../chapter5/5.1/5.1.2.html">
+            
+                <a href="../chapter5/5.1/5.1.2.html">
+            
+                    
+                    5.1.2 CSS过渡钩子函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../chapter5/5.1/5.1.3.html">
+            
+                <a href="../chapter5/5.1/5.1.3.html">
+            
+                    
+                    5.1.3 显示声明过渡类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../chapter5/5.1/5.1.4.html">
+            
+                <a href="../chapter5/5.1/5.1.4.html">
+            
+                    
+                    5.1.4 自定义过渡类名
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/5.2/">
+            
+                <a href="../chapter5/5.2/">
+            
+                    
+                    5.2 JavaScript过渡
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../chapter5/5.2/5.2.1.html">
+            
+                <a href="../chapter5/5.2/5.2.1.html">
+            
+                    
+                    5.2.1 Velocity.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../chapter5/5.2/5.2.2.html">
+            
+                <a href="../chapter5/5.2/5.2.2.html">
+            
+                    
+                    5.2.2 JavaScript过渡使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/5.3/">
+            
+                <a href="../chapter5/5.3/">
+            
+                    
+                    5.3 过渡系统在Vue.js 2.0中的变化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../chapter5/5.3/5.3.1.html">
+            
+                <a href="../chapter5/5.3/5.3.1.html">
+            
+                    
+                    5.3.1 用法变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../chapter5/5.3/5.3.2.html">
+            
+                <a href="../chapter5/5.3/5.3.2.html">
+            
+                    
+                    5.3.2 类名变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../chapter5/5.3/5.3.3.html">
+            
+                <a href="../chapter5/5.3/5.3.3.html">
+            
+                    
+                    5.3.3 钩子函数变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.4" data-path="../chapter5/5.3/5.3.4.html">
+            
+                <a href="../chapter5/5.3/5.3.4.html">
+            
+                    
+                    5.3.4 transition-group
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    第 6 章 组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/6.1/">
+            
+                <a href="../chapter6/6.1/">
+            
+                    
+                    6.1 组件注册
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../chapter6/6.1/6.1.1.html">
+            
+                <a href="../chapter6/6.1/6.1.1.html">
+            
+                    
+                    6.1.1 全局注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../chapter6/6.1/6.1.2.html">
+            
+                <a href="../chapter6/6.1/6.1.2.html">
+            
+                    
+                    6.1.2 局部注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../chapter6/6.1/6.1.3.html">
+            
+                <a href="../chapter6/6.1/6.1.3.html">
+            
+                    
+                    6.1.3 注册语法糖
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/6.2/">
+            
+                <a href="../chapter6/6.2/">
+            
+                    
+                    6.2 组件选项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../chapter6/6.2/6.2.1.html">
+            
+                <a href="../chapter6/6.2/6.2.1.html">
+            
+                    
+                    6.2.1 组件选项中与Vue选项的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../chapter6/6.2/6.2.2.html">
+            
+                <a href="../chapter6/6.2/6.2.2.html">
+            
+                    
+                    6.2.2 组件Props
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/6.3/">
+            
+                <a href="../chapter6/6.3/">
+            
+                    
+                    6.3 组件间通信
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../chapter6/6.3/6.3.1.html">
+            
+                <a href="../chapter6/6.3/6.3.1.html">
+            
+                    
+                    6.3.1 直接访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../chapter6/6.3/6.3.2.html">
+            
+                <a href="../chapter6/6.3/6.3.2.html">
+            
+                    
+                    6.3.2 自定义事件监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.3" data-path="../chapter6/6.3/6.3.3.html">
+            
+                <a href="../chapter6/6.3/6.3.3.html">
+            
+                    
+                    6.3.3 自定义事件触发机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.4" data-path="../chapter6/6.3/6.3.4.html">
+            
+                <a href="../chapter6/6.3/6.3.4.html">
+            
+                    
+                    6.3.4 子组件索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter6/6.4/">
+            
+                <a href="../chapter6/6.4/">
+            
+                    
+                    6.4 内容分发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../chapter6/6.4/6.4.1.html">
+            
+                <a href="../chapter6/6.4/6.4.1.html">
+            
+                    
+                    6.4.1 基础用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../chapter6/6.4/6.4.2.html">
+            
+                <a href="../chapter6/6.4/6.4.2.html">
+            
+                    
+                    6.4.2 编译作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../chapter6/6.4/6.4.3.html">
+            
+                <a href="../chapter6/6.4/6.4.3.html">
+            
+                    
+                    6.4.3 默认slot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.4" data-path="../chapter6/6.4/6.4.4.html">
+            
+                <a href="../chapter6/6.4/6.4.4.html">
+            
+                    
+                    6.4.4 slot属性相同
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.5" data-path="../chapter6/6.4/6.4.5.html">
+            
+                <a href="../chapter6/6.4/6.4.5.html">
+            
+                    
+                    6.4.5 Modal实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../chapter6/6.5/">
+            
+                <a href="../chapter6/6.5/">
+            
+                    
+                    6.5 动态组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.5.1" data-path="../chapter6/6.5/6.5.1.html">
+            
+                <a href="../chapter6/6.5/6.5.1.html">
+            
+                    
+                    6.5.1 基础用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.2" data-path="../chapter6/6.5/6.5.2.html">
+            
+                <a href="../chapter6/6.5/6.5.2.html">
+            
+                    
+                    6.5.2 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5.3" data-path="../chapter6/6.5/6.5.3.html">
+            
+                <a href="../chapter6/6.5/6.5.3.html">
+            
+                    
+                    6.5.3 activate钩子函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../chapter6/6.6/">
+            
+                <a href="../chapter6/6.6/">
+            
+                    
+                    6.6 Vue.js 2.0中的变化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../chapter6/6.6/6.6.1.html">
+            
+                <a href="../chapter6/6.6/6.6.1.html">
+            
+                    
+                    6.6.1 event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.2" data-path="../chapter6/6.6/6.6.2.html">
+            
+                <a href="../chapter6/6.6/6.6.2.html">
+            
+                    
+                    6.6.2 keep-alive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.3" data-path="../chapter6/6.6/6.6.3.html">
+            
+                <a href="../chapter6/6.6/6.6.3.html">
+            
+                    
+                    6.6.3 slot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.4" data-path="../chapter6/6.6/6.6.4.html">
+            
+                <a href="../chapter6/6.6/6.6.4.html">
+            
+                    
+                    6.6.4 refs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    第 7 章 Vue.js常用插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/7.1/">
+            
+                <a href="../chapter7/7.1/">
+            
+                    
+                    7.1 Vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/7.2/">
+            
+                <a href="../chapter7/7.2/">
+            
+                    
+                    7.2 Vue-resource
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/7.3/">
+            
+                <a href="../chapter7/7.3/">
+            
+                    
+                    7.3 Vue-devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    第 8 章 Vue.js工程实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第 9 章 状态管理：Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第 9 章 状态管理：Vuex</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;-9-&#x7AE0;-&#x72B6;&#x6001;&#x7BA1;&#x7406;&#xFF1A;vuex">&#x7B2C; 9 &#x7AE0; &#x72B6;&#x6001;&#x7BA1;&#x7406;&#xFF1A;Vuex</h1>
+<p><strong>&#x81EA;&#x884C;&#x767E;&#x5EA6;Vuex</strong><br><strong><a href="https://vuex.vuejs.org/zh/" target="_blank">https://vuex.vuejs.org/zh/</a></strong></p>
+<p>Store&#xFF08;&#x4ED3;&#x5E93;&#xFF09;&#x3001;State&#xFF08;&#x72B6;&#x6001;&#xFF09;&#x3001;Mutations&#xFF08;&#x53D8;&#x66F4;&#xFF09;&#x3001;Actions&#xFF08;&#x52A8;&#x4F5C;&#xFF09;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+&#x3000;&#x3000;&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">side</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">side</span>&gt;</span>
+&#x3000;&#x3000;&#x3000;<span class="hljs-tag">&lt;<span class="hljs-name">content</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">content</span>&gt;</span>
+&#x3000; <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript">   import Side from &apos;./Side.vue&apos;
+&#x3000; import Content from &apos;./Content.vue&apos;
+&#x3000; export default {
+&#x3000;&#x3000; components : {
+&#x3000;&#x3000;&#x3000; Side,
+&#x3000;&#x3000;&#x3000; Content
+&#x3000;&#x3000; }
+&#x3000; }
+&lt;/script&gt;
+</code></pre>
+<p>&#x521B;&#x5EFA;Side&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;components/Side.vue&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+&#x3000; <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;side list-unstyled&quot;</span>&gt;</span>
+&#x3000;&#x3000; <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#x589E;&#x52A0;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+&#x3000;&#x3000; <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#x5220;&#x9664;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+&#x3000; <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<p>&#x521B;&#x5EFA;Content&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;components/Content.vue&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+&#x3000; <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>
+&#x3000;&#x3000; <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in items&quot;</span>&gt;</span>
+&#x3000;&#x3000;&#x3000; {{ item.content }}
+&#x3000;&#x3000; <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+&#x3000; <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;&#x5E76;&#x6CE8;&#x5165;store">&#x521B;&#x5EFA;&#x5E76;&#x6CE8;&#x5165;store</h2>
+<p>&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x901A;&#x8FC7;Side&#x7EC4;&#x4EF6;&#x53BB;&#x6DFB;&#x52A0;Content&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;item&#xFF0C;&#x53EA;&#x80FD;&#x4F9D;&#x8D56;&#x4E8E;&#x6839;&#x7EC4;&#x4EF6;App&#x6765;&#x8FDB;&#x884C;&#x4E8B;&#x4EF6;&#x7684;&#x76D1;&#x542C;&#x548C;&#x5E7F;&#x64AD;&#xFF0C;&#x8FD9;&#x6837;&#x65E2;&#x589E;&#x52A0;&#x4E86;&#x8026;&#x5408;&#x5EA6;&#xFF0C;&#x4E5F;&#x4F7F;&#x5F97;Side&#x7EC4;&#x4EF6;&#x548C;Content&#x7EC4;&#x4EF6;&#x65E0;&#x6CD5;&#x72EC;&#x7ACB;&#x590D;&#x7528;&#x3002;
+&#x800C;&#x5728;Vuex&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x4F1A;&#x589E;&#x52A0;Store&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x6240;&#x9700;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x672C;&#x4F8B;&#x4E2D;&#x5C06;&#x5B58;&#x50A8;&#x5143;&#x7D20;&#x7684;&#x5217;&#x8868;&#x3002;
+&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;npm&#x5148;&#x5B89;&#x88C5;Vuex&#x3002;</p>
+<p>&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;vuex/store.js&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript">import Vue from &apos;vue&apos;
+import Vuex from &apos;vuex&apos;
+
+Vue.use(Vuex)
+
+// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6765;&#x4FDD;&#x5B58;&#x5E94;&#x7528;&#x542F;&#x52A8;&#x65F6;&#x7684;&#x521D;&#x59CB;&#x72B6;&#x6001;    
+
+const state = {
+&#x3000; items: [],&#x3000;// items&#x4E3A;&#x5143;&#x7D20;&#x5217;&#x8868;,    
+&#x3000; name : &quot;&#x3000;// &#x5E94;&#x7528;&#x540D;&#x79F0;    
+}
+
+// &#x7528;&#x4E8E;&#x66F4;&#x6539;&#x72B6;&#x6001;&#x7684;mutation&#x51FD;&#x6570;    
+
+const mutations = {
+&#x3000; &#x2026;.
+};
+
+export default new Vuex.Store({
+&#x3000; state,
+&#x3000; mutations
+})
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x597D;store&#x540E;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x5176;&#x6CE8;&#x5165;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;app.js&#xFF0C;&#x5F15;&#x5165;Vue,Vuex&#x53CA;&#x6839;&#x7EC4;&#x4EF6;App.vue&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./vuex/store&apos;</span>
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/App.vue&apos;</span>
+
+<span class="hljs-keyword">new</span> Vue({
+&#x3000; store,
+&#x3000; el: <span class="hljs-string">&apos;body&apos;</span>,
+&#x3000; components: { App }
+})
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;action&#x53CA;&#x7EC4;&#x4EF6;&#x8C03;&#x7528;&#x65B9;&#x5F0F;">&#x521B;&#x5EFA;action&#x53CA;&#x7EC4;&#x4EF6;&#x8C03;&#x7528;&#x65B9;&#x5F0F;</h2>
+<p>action&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x5206;&#x53D1;&#xFF08;dispatch&#xFF09;&#xFF0C;&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684;mutation&#x51FD;&#x6570;&#xFF0C;&#x6765;&#x89E6;&#x53D1;&#x5BF9;store&#x7684;&#x66F4;&#x65B0;&#x3002;
+&#x6211;&#x4EEC;&#x5728;&#x76F8;&#x540C;&#x76EE;&#x5F55;&#x4E0B;&#x5EFA;&#x7ACB;vuex/actions.js&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> addItem = ({ dispatch, store }, item) =&gt; {
+&#x3000; dispatch(<span class="hljs-string">&apos;ADD_ITEM&apos;</span>, item);
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> deleteItem = ({ dispatch, store}) =&gt; {
+&#x3000; dispatch(<span class="hljs-string">&apos;DELETE_ITEM&apos;</span>);
+}
+</code></pre>
+<p>action&#x51FD;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x5411;&#x540E;&#x7AEF;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x6216;&#x8BFB;&#x53D6;store&#x4E2D;&#x5176;&#x4ED6;&#x7684;&#x76F8;&#x5173;&#x6570;&#x636E;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x5206;&#x53D1;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> getDataFromServer = ({ dispatch, store}) =&gt; {
+&#x3000; <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x53EA;&#x662F;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x8BF4;&#x660E;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5F15;&#x5165;&#x6240;&#x9700;&#x7684;&#x5F02;&#x6B65;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;</span>
+&#x3000; $.ajax({
+&#x3000;&#x3000; url : <span class="hljs-string">&apos;/api/data&apos;</span>,
+&#x3000;&#x3000; success : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>) </span>{
+&#x3000;&#x3000;&#x3000; diapatch(<span class="hljs-string">&apos;FETCH_DATA&apos;</span>, data);
+&#x3000;&#x3000; }
+&#x3000; })
+}
+</code></pre>
+<p>&#x5728;Vuex&#x4E2D;&#xFF0C;&#x7EC4;&#x4EF6;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x4FEE;&#x6539;store&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x81EA;&#x8EAB;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x90FD;&#x662F;&#x901A;&#x8FC7;action&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x8FDB;&#x884C;&#x5206;&#x53D1;&#x3002;&#x4E0B;&#x9762;&#x5C31;&#x6765;&#x4FEE;&#x6539;component/Side.vue&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x4E4B;&#x80FD;&#x8C03;&#x7528;action&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript">// &#x4FEE;&#x6539;template&#xFF0C;&#x4E3A;&#x589E;&#x52A0;&#x3001;&#x5220;&#x9664;&#x4E24;&#x4E2A;&#x6309;&#x952E;&#x6DFB;&#x52A0;&#x4E8B;&#x4EF6;
+&lt;ul class=&quot;side list-unstyled&quot;&gt;
+&#x3000; &lt;li @click=&quot;addItem({ content : Math.random()})&quot;&gt;&#x589E;&#x52A0;&lt;/li&gt;
+&#x3000; &lt;li @click=&quot;deleteItem()&quot;&gt;&#x5220;&#x9664;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script&gt;
+import { addItem } from &apos;../vuex/actions&apos;
+
+export default {
+&#x3000; data() {
+&#x3000;&#x3000; return {
+&#x3000;&#x3000; }
+&#x3000; },
+&#x3000; vuex: {
+&#x3000;&#x3000; actions: {
+&#x3000;&#x3000; &#x3000; addItem,
+&#x3000;&#x3000; &#x3000; deleteItem
+&#x3000;&#x3000; }
+&#x3000; }
+}
+&lt;/script&gt;
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x4E4B;&#x524D;&#x5DF2;&#x7ECF;&#x6CE8;&#x5165;&#x4E86;store&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x9009;&#x9879;vuex&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4E00;&#x4E2A;actions&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x5C06;actions.js&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x8D4B;&#x503C;&#x8FDB;&#x53BB;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x3002;</p>
+<h2 id="&#x521B;&#x5EFA;mutation">&#x521B;&#x5EFA;mutation</h2>
+<p>action&#x5206;&#x53D1;&#x540E;&#x5C31;&#x7531;mutation&#x6765;&#x5BF9;store&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4E4B;&#x524D;&#x7684;vuex/store.js&#x6587;&#x4EF6;&#xFF0C;&#x8865;&#x5168;&#x5728;vuex/actions.js&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x4E24;&#x79CD;&#x884C;&#x4E3A;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> mutations = {
+&#x3000; ADD_ITEM (state, item) {
+&#x3000;&#x3000; state.items.push(item);
+&#x3000; },
+
+&#x3000; DELETE_ITEM (state) {
+&#x3000;&#x3000; state.items.pop();
+&#x3000; }
+};
+</code></pre>
+<p>&#x5BF9;&#x6BD4;actions.js&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x548C;mutations&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;action&#x5728;&#x8C03;&#x52A8;dispatch&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x51C6;&#x786E;&#x5730;&#x4F20;&#x5165;action&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x548C;mutations&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;&#x7531;&#x4E8E;&#x52A8;&#x4F5C;&#x540D;&#x79F0;&#x5F80;&#x5F80;&#x4E3A;&#x5E38;&#x91CF;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4E60;&#x60EF;&#x7528;&#x5927;&#x5199;&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x547D;&#x540D;&#x3002;&#x5728;&#x5927;&#x578B;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x4E5F;&#x4F1A;&#x5355;&#x72EC;&#x628A;&#x52A8;&#x4F5C;&#x540D;&#x79F0;&#x96C6;&#x5408;&#x62BD;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x5355;&#x72EC;&#x7BA1;&#x7406;&#xFF0C;&#x4F8B;&#x5982;&#x62BD;&#x8C61;&#x6210;vuex/mutation-type.js&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+&#x3000; ADD_ITEM : <span class="hljs-string">&apos;ADD_ITEM&apos;</span>,
+&#x3000; DELETE_ITEM : <span class="hljs-string">&apos;DELETE_ITEM&apos;</span>
+&#x3000; &#x2026;..
+}
+</code></pre>
+<p>vuex/actions.js&#x5373;&#x53EF;&#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { ADD_ITEM } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./mutation-type.js&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> addItem = ({ dispatch, store }, item) =&gt; {
+&#x3000; dispatch(ADD_ITEM, item);
+}
+</code></pre>
+<p>vuex/store.js&#x4E2D;&#x7684;mutations&#x53EF;&#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { ADD_ITEM } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./mutation-type.js&apos;</span>
+
+<span class="hljs-keyword">const</span> mutations = {
+&#x3000; [ADD_ITEM](state, item) {
+&#x3000; &#x2026;&#x2026;.
+}
+</code></pre>
+<h2 id="&#x7EC4;&#x4EF6;&#x83B7;&#x53D6;state">&#x7EC4;&#x4EF6;&#x83B7;&#x53D6;state</h2>
+<p>&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;vuex&#x9009;&#x9879;&#x9664;&#x4E86;actions&#x5C5E;&#x6027;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;getters&#x5C5E;&#x6027;&#xFF0C;&#x91CC;&#x9762;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x53D7;&#x7684;&#x53C2;&#x6570;&#x5373;&#x4E3A;vuex/store.js&#x4E2D;&#x5B9A;&#x4E49;&#x7684;state&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x4FEE;&#x6539;components/Content.vue&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+&#x3000; vuex: {
+&#x3000;&#x3000; getters: {
+&#x3000;&#x3000;&#x3000; <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x91C7;&#x7528;&#x7684;ES6&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x66FF;&#x6362;&#x6210;</span>
+&#x3000;&#x3000;&#x3000; <span class="hljs-comment">// items : function(state) { return state.items }</span>
+&#x3000;&#x3000;&#x3000; items: state =&gt; state.items
+&#x3000;&#x3000; }
+&#x3000; }
+}
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x4E2D;&#x5C31;&#x83B7;&#x5F97;&#x4E86;state&#x4E2D;&#x7684;items&#x6570;&#x7EC4;&#xFF0C;&#x5728;template&#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;\<li v-for="&#x201C;item" in="" items”\="">\&lt;\/li&gt;&#x6765;&#x904D;&#x5386;&#x6570;&#x636E;&#x3002;</li></p>
+<p>&#x9664;&#x4E86;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x76F4;&#x63A5;&#x58F0;&#x660E;getters&#x51FD;&#x6570;&#x5916;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x62BD;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;vuex/getters.js&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getItems</span>(<span class="hljs-params">state</span>) </span>{
+&#x3000; <span class="hljs-keyword">return</span> state.items;
+}
+</code></pre>
+<p>components/Content.vue&#x5373;&#x53EF;&#x4FEE;&#x6539;&#x6210;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { getItems } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../vuex/getters&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+&#x3000; vuex: {
+&#x3000;&#x3000; getters: {
+&#x3000;&#x3000;&#x3000; items: getItems
+&#x3000;&#x3000; }
+&#x3000; }
+}
+</code></pre>
+<p>getters&#x7684;&#x4F7F;&#x7528;&#x5E76;&#x4E0D;&#x662F;&#x5F3A;&#x5236;&#x89C4;&#x5B9A;&#xFF0C;&#x53EA;&#x662F;&#x4E00;&#x79CD;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x3002;&#x7279;&#x522B;&#x662F;&#x5BF9;&#x4E8E;&#x5927;&#x578B;&#x5E94;&#x7528;&#x6765;&#x8BF4;&#xFF0C;&#x5F88;&#x591A;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x5171;&#x7528;getters&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x6837;state&#x4E2D;&#x7684;&#x503C;&#x5982;&#x679C;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF0C;&#x4E5F;&#x53EA;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;getter&#x65B9;&#x6CD5;&#x5373;&#x53EF;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x4FEE;&#x6539;&#x6240;&#x6D89;&#x53CA;&#x7684;&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x6574;&#x4F53;&#x7684;&#x6D41;&#x7A0B;</p>
+<ul>
+<li><p>&#x64CD;&#x4F5C;&#x7EC4;&#x4EF6;&#xFF1A;&#x5355;&#x51FB;&#x7EC4;&#x4EF6;&#x6309;&#x94AE;&#xFF0C;&#x8C03;&#x7528;&#x7EC4;&#x4EF6;&#x4E2D;&#x83B7;&#x53D6;&#x7684;action&#x51FD;&#x6570;&#x3002;</p>
+</li>
+<li><p>action dispatch&#xFF1A;action&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x5BF9;store&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;dispatch&#x7684;&#x65B9;&#x5F0F;&#x901A;&#x77E5;&#x5230;&#x5BF9;&#x5E94;&#x7684;mutation&#x3002;</p>
+</li>
+<li><p>mutation&#xFF1A;mutation&#x51FD;&#x6570;&#x5219;&#x5305;&#x542B;&#x4E86;&#x5BF9;store&#x6570;&#x636E;&#x7684;&#x5177;&#x4F53;&#x4FEE;&#x6539;&#x5185;&#x5BB9;&#x3002;</p>
+</li>
+<li><p>store/state&#xFF1A;store&#x662F;&#x5305;&#x542B;&#x5F53;&#x524D;state&#x7684;&#x5355;&#x4E00;&#x5BF9;&#x8C61;&#xFF0C;&#x6570;&#x636E;&#x66F4;&#x65B0;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x901A;&#x77E5;&#x5230;getter&#x51FD;&#x6570;&#x3002;</p>
+</li>
+<li><p>getter&#xFF1A;getter&#x51FD;&#x6570;&#x4ECE;store&#x83B7;&#x53D6;&#x7EC4;&#x4EF6;&#x6240;&#x9700;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+</li>
+<li><p>&#x7EC4;&#x4EF6;&#x5C55;&#x793A;&#xFF1A;&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;getter&#x51FD;&#x6570;&#xFF0C;&#x83B7;&#x53D6;&#x65B0;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8FDB;&#x884C;&#x5C55;&#x793A;&#x3002;</p>
+</li>
+</ul>
+<h1 id="&#x4E25;&#x683C;&#x6A21;&#x5F0F;">&#x4E25;&#x683C;&#x6A21;&#x5F0F;</h1>
+<p>Vuex.store&#x5177;&#x6709;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;&#x5F53;Vuex State&#x5728;mutation&#x51FD;&#x6570;&#x4E4B;&#x5916;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x88AB;&#x4FEE;&#x6539;&#x65F6;&#xFF0C;&#x5373;&#x4F1A;&#x629B;&#x51FA;&#x9519;&#x8BEF;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x65F6;&#x4F20;&#x5165;strict:true&#x53C2;&#x6570;&#xFF0C;&#x5373;&#x53EF;&#x5F00;&#x542F;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> store = <span class="hljs-keyword">new</span> Vuex.Store({
+&#x3000; <span class="hljs-comment">//&#x2026;.</span>
+&#x3000; strict : <span class="hljs-literal">true</span>
+})
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x4E0D;&#x8981;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x5F00;&#x542F;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x3002;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4F1A;&#x5BF9;state&#x6811;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x6DF1;&#x5165;&#x89C2;&#x5BDF;&#xFF0C;&#x4F1A;&#x9020;&#x6210;&#x989D;&#x5916;&#x7684;&#x6027;&#x80FD;&#x635F;&#x8017;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5C06;&#x4E0A;&#x8FF0;&#x4F8B;&#x5B50;&#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> store = <span class="hljs-keyword">new</span> Vuex.Store({
+&#x3000; <span class="hljs-comment">//&#x2026;.</span>
+&#x3000; strict : process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>
+})
+</code></pre>
+<h1 id="&#x4E2D;&#x95F4;&#x4EF6;">&#x4E2D;&#x95F4;&#x4EF6;</h1>
+<p>Vuex store&#x63A5;&#x53D7;middlewars&#x9009;&#x9879;&#x6765;&#x52A0;&#x8F7D;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> store = <span class="hljs-keyword">new</span> Vuex.Store({
+&#x3000; <span class="hljs-comment">// &#x2026;.</span>
+&#x3000; middlewares : [myMiddleware]
+})
+</code></pre>
+<p>myMiddleware&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x8BBE;&#x5B9A;&#x597D;&#x7684;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> myMiddleware = {
+&#x3000; onInit(state) {
+&#x3000;&#x3000; <span class="hljs-comment">// &#x5728;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x8BB0;&#x5F55;&#x521D;&#x59CB;state</span>
+&#x3000;&#x3000; <span class="hljs-built_in">console</span>.log(state);
+&#x3000; },
+&#x3000; onMutation(mutation, state) {
+&#x3000;&#x3000; <span class="hljs-comment">// &#x6BCF;&#x4E2A;mutation&#x4E4B;&#x540E;&#x90FD;&#x4F1A;&#x8C03;&#x7528;</span>
+&#x3000;&#x3000; <span class="hljs-comment">// &#x6BCF;&#x4E2A;mutation&#x53C2;&#x6570;&#x683C;&#x5F0F;&#x4E3A;{ type, payload}</span>
+&#x3000;&#x3000; <span class="hljs-built_in">console</span>.log(mutation, state);
+&#x3000; }
+}
+</code></pre>
+<h2 id="&#x5FEB;&#x7167;">&#x5FEB;&#x7167;</h2>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x4E2D;&#x95F4;&#x4EF6;&#x5185;&#x8BBE;&#x7F6E;&#x83B7;&#x53D6;state&#x7684;&#x5FEB;&#x7167;&#xFF0C;&#x7528;&#x6765;&#x6BD4;&#x8F83;mutation&#x6267;&#x884C;&#x524D;&#x540E;&#x7684;state&#x3002;&#x53EA;&#x9700;&#x5728;&#x8BBE;&#x7F6E;&#x4E2D;&#x95F4;&#x4EF6;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#x65B0;&#x589E;snapshot&#x9009;&#x9879;&#x53CA;onMutation&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> mySnap = {
+&#x3000; snapshot: <span class="hljs-literal">true</span>,
+&#x3000; onMutation (mutation, nextState, prevState) {
+&#x3000;&#x3000; <span class="hljs-comment">// nextState&#x548C;prevState&#x5206;&#x522B;&#x4E3A;mutation&#x89E6;&#x53D1;&#x524D;&#x548C;&#x89E6;&#x53D1;&#x540E;&#x5BF9;&#x539F;state&#x5BF9;&#x8C61;&#x7684;&#x6DF1;&#x62F7;&#x8D1D;</span>
+&#x3000; }
+}
+</code></pre>
+<p>&#x540C;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E00;&#x6837;&#xFF0C;&#x5FEB;&#x7167;&#x6A21;&#x5F0F;&#x4E5F;&#x5EFA;&#x8BAE;&#x53EA;&#x5728;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x4E0B;&#x4F7F;&#x7528;&#xFF0C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E0E;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x7C7B;&#x4F3C;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> store = <span class="hljs-keyword">new</span> Vuex.store({
+&#x3000; <span class="hljs-comment">//&#x2026;.</span>
+&#x3000; middlewares : process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> ? [mySnap] : []
+})
+</code></pre>
+<h2 id="logger">logger</h2>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8C03;&#x8BD5;&#x548C;&#x89C2;&#x5BDF;&#x6570;&#x636E;&#x53D8;&#x5316;&#xFF0C;Vuex&#x81EA;&#x5E26;&#x4E86;&#x4E00;&#x4E2A;logger&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x4F7F;&#x7528;&#x7684;vuex&#x7248;&#x672C;&#x662F;0.82</span>
+<span class="hljs-keyword">import</span> createLogger <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex/logger&apos;</span>;
+
+<span class="hljs-keyword">const</span> store = <span class="hljs-keyword">new</span> Vuex.Store({
+&#x3000; middlewares : [createLogger()]
+})
+</code></pre>
+<p>&#x5728;&#x8C03;&#x7528;action&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x770B;&#x5230;logger&#x4E2D;&#x95F4;&#x4EF6;&#x8F93;&#x51FA;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8BB0;&#x5F55;&#x4E86;mutation&#x7684;type&#x548C;&#x8C03;&#x7528;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x53CA;state&#x7684;&#x53D8;&#x5316;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<p>createLogger&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x9009;&#x9879;&#x53EF;&#x4F9B;&#x914D;&#x7F6E;&#x3002;</p>
+<ol>
+<li><p>collapsed&#xFF1A;&#x9ED8;&#x8BA4;&#x4E3A;true&#xFF0C;&#x7528;&#x4E8E;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x5C55;&#x5F00;&#x8F93;&#x51FA;&#x7684;mutations&#x3002;</p>
+</li>
+<li><p>transformer&#xFF1A;&#x7C7B;&#x578B;&#x4E3A;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x53D7;state&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x9650;&#x5B9A;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;&#x7684;&#x90E8;&#x5206;state&#x3002;&#x7531;&#x4E8E;&#x5728;&#x5927;&#x578B;&#x5E94;&#x7528;&#x4E2D;state&#x901A;&#x5E38;&#x4F1A;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x5982;&#x679C;&#x90FD;&#x76F4;&#x63A5;&#x8F93;&#x51FA;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x4F1A;&#x663E;&#x5F97;&#x6BD4;&#x8F83;&#x6742;&#x4E71;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x7528;transformer&#x8FDB;&#x884C;&#x63A7;&#x5236;&#x3002;</p>
+</li>
+<li><p>mutationTransformer&#xFF1A;&#x7C7B;&#x578B;&#x4E3A;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x53D7;mutation&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x5373;&#x4E3A;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x8F93;&#x51FA;&#x7684;mutation&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;{ type : &#x2018;&#x2019;, payload : &#x2018;&#x2019;}&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x5B9A;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x6765;&#x5BF9;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x8F93;&#x51FA;&#x8FDB;&#x884C;&#x81EA;&#x5B9A;&#x4E49;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;return mutation.type&#xFF0C;&#x8FD9;&#x6837;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x4EC5;&#x4F1A;&#x8F93;&#x51FA;mutation.type&#x7684;&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x8F93;&#x51FA;mutation.payload</p>
+</li>
+</ol>
+<p>createLogger&#x4F7F;&#x7528;&#x9009;&#x9879;&#x7684;&#x5177;&#x4F53;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> createLogger <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex/logger&apos;</span>;
+
+<span class="hljs-keyword">const</span> logger = createLogger({
+&#x3000; collapsed: <span class="hljs-literal">false</span>,
+&#x3000; transformer (state) {
+&#x3000;&#x3000; <span class="hljs-keyword">return</span> state.items
+&#x3000; },
+&#x3000; mutationTransformer (mutation) {
+&#x3000;&#x3000; <span class="hljs-keyword">return</span> mutation.type
+&#x3000; }
+})
+
+<span class="hljs-keyword">const</span> store = <span class="hljs-keyword">new</span> Vuex.Store({
+&#x3000; middlewares : [logger]
+})
+</code></pre>
+<h1 id="&#x8868;&#x5355;&#x5904;&#x7406;">&#x8868;&#x5355;&#x5904;&#x7406;</h1>
+<p>&#x5728;Vuex&#x7684;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x8868;&#x5355;&#x5904;&#x7406;&#x4F1A;&#x7A0D;&#x663E;&#x4E0D;&#x540C;&#xFF0C;&#x56E0;&#x4E3A;&#x8868;&#x5355;&#x201C;&#x5929;&#x7136;&#x201D;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x7EC4;&#x4EF6;&#x5185;&#x72B6;&#x6001;&#xFF0C;&#x8FD9;&#x548C;Vuex&#x7684;action&#x2192;mutation&#x2192;state&#x7684;&#x4FEE;&#x6539;&#x65B9;&#x5F0F;&#x663E;&#x7136;&#x5E76;&#x4E0D;&#x7B26;&#x5408;&#x3002;&#x7279;&#x522B;&#x662F;&#x5728;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x7B2C;9.2&#x8282;&#x4E2D;&#x7684;components/content.vue&#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+&#x3000; <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>
+&#x3000;&#x3000; <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in items&quot;</span>&gt;</span>
+&#x3000;&#x3000;&#x3000; <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;item.content&quot;</span> /&gt;</span>
+&#x3000;&#x3000; <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+&#x3000; <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+</code></pre>
+<p>&#x5728;&#x7528;&#x6237;&#x8F93;&#x5165;&#x65F6;&#xFF0C;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x76F4;&#x63A5;&#x4FEE;&#x6539;state&#x72B6;&#x6001;&#x3002;&#x800C;&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x4FEE;&#x6539;&#x5E76;&#x4E0D;&#x662F;&#x5728;mutation&#x4E2D;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x6B64;&#x65F6;vuex&#x5C31;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x8B66;&#x544A;&#xFF1A;</p>
+<p>&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x4E5F;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x66F4;&#x597D;&#x5730;&#x8DDF;&#x8E2A;state&#x72B6;&#x6001;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x628A;&#x8868;&#x5355;&#x5143;&#x7D20;&#x7ED1;&#x5B9A;state&#x7684;&#x503C;&#xFF0C;&#x5E76;&#x5728;change&#x6216;&#x8005;blur&#x4E8B;&#x4EF6;&#x4E2D;&#x76D1;&#x542C;action&#x884C;&#x4E3A;&#xFF0C;&#x4E0D;&#x63A8;&#x8350;&#x4F7F;&#x7528;input&#xFF0C;&#x8FD9;&#x6837;&#x6BCF;&#x6B21;&#x8F93;&#x5165;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;action&#xFF0C;&#x5BF9;&#x6027;&#x80FD;&#x6D88;&#x8017;&#x8F83;&#x5927;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-javascript">&lt;input :value=<span class="hljs-string">&quot;item.content&quot;</span> @change=<span class="hljs-string">&quot;updateContent($index, $event.target.value)&quot;</span> &gt;
+<span class="hljs-comment">//&#x3000;components/content.vue &#x7684;js&#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</span>
+<span class="hljs-keyword">import</span> { updateContent } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../vuex/actions&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+&#x3000; vuex: {
+&#x3000;&#x3000; getters: {
+&#x3000;&#x3000;&#x3000; items: state =&gt; state.items
+&#x3000;&#x3000; },
+&#x3000;&#x3000; actions: {
+&#x3000;&#x3000;&#x3000; updateContent
+&#x3000;&#x3000; }
+&#x3000; }
+}
+<span class="hljs-comment">// vuex/actions.js&#x4E2D;&#x589E;&#x52A0;updateContent&#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> updateContent = ({ dispatch }, index, value) =&gt; {
+&#x3000; dispatch(<span class="hljs-string">&apos;UPDATE_CONTENT&apos;</span>, index, value)
+}
+<span class="hljs-comment">// vuex/store.js&#x4E2D;&#x589E;&#x52A0;mutations&#x7684;UPDATE_CONTENT&#x5C5E;&#x6027;&#xFF1A;</span>
+<span class="hljs-keyword">const</span> mutations = {
+<span class="hljs-comment">// &#x2026;..</span>
+&#x3000; UPDATE_CONTENT(state, index, value) {
+&#x3000;&#x3000; <span class="hljs-comment">// &#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#x4FEE;&#x6539;&#x7684;&#x662F;items&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#x4E2D;content&#x7684;&#x503C;</span>
+&#x3000;&#x3000; <span class="hljs-comment">// &#x5982;&#x679C;&#x76F4;&#x63A5;&#x5199;&#x6210; state.items[index].content = value, vue&#x662F;&#x65E0;&#x6CD5;&#x76D1;&#x542C;&#x5230;&#x6570;&#x503C;&#x53D8;&#x5316;&#x7684;</span>
+&#x3000;&#x3000; <span class="hljs-comment">// &#x4E5F;&#x5C31;&#x65E0;&#x6CD5;&#x66F4;&#x65B0;&#x89C6;&#x56FE;&#x4E0A;&#x7684;content&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x6B64;&#x5904;&#x7528;$set&#x65B9;&#x5F0F;&#x66F4;&#x65B0;&#x6570;&#x636E;</span>
+&#x3000;&#x3000; state.items.$set(index, { content : value });
+&#x3000; }
+};
+</code></pre>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x89C9;&#x5F97;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x8DDF;&#x8E2A;item.content&#x7684;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x5C06;&#x6B64;&#x5185;&#x5BB9;&#x653E;&#x5165;Vuex&#x4E2D;&#xFF0C;&#x5B8C;&#x5168;&#x5F53;&#x505A;&#x7EC4;&#x4EF6;&#x7684;&#x672C;&#x5730;&#x72B6;&#x6001;&#x3002;&#x4E00;&#x822C;&#x548C;&#x5176;&#x4ED6;&#x7EC4;&#x4EF6;&#x4E0D;&#x4EA7;&#x751F;&#x5F71;&#x54CD;&#x7684;&#x72B6;&#x6001;&#x5C31;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x5E0C;&#x671B;&#x4F7F;&#x7528;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#xFF0C;&#x53C8;&#x60F3;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;v-model&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Vue.js&#x7684;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x6765;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x4FEE;&#x6539;components/content.vue</span>
+&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">&quot;content&quot;</span>&gt;
+&#x3000; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;appName&quot;</span>&gt;</span>
+&#x3000; &#x2026;..
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="hljs-keyword">import</span> { updateContent, updateName } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../vuex/actions&apos;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+&#x3000; vuex: {
+  &#x3000; getters: {
+  &#x3000;&#x3000; <span class="hljs-comment">// &#x2026;.</span>
+  &#x3000;&#x3000; name : state =&gt; state.name
+  &#x3000; },
+  &#x3000; actions: {
+  &#x3000;&#x3000; <span class="hljs-comment">// &#x2026;.</span>
+  &#x3000;&#x3000; updateName
+&#x3000;   }
+&#x3000; },
+&#x3000; computed: {
+  &#x3000; appName: {
+&#x3000;  &#x3000; get() {
+&#x3000;&#x3000;  &#x3000; <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;
+  &#x3000;&#x3000; },
+&#x3000;  &#x3000; set(val) {
+&#x3000;&#x3000;  &#x3000; <span class="hljs-keyword">this</span>.updateName(val);
+  &#x3000;&#x3000; }
+&#x3000;   }
+&#x3000; }
+}
+<span class="hljs-comment">// &#x4FEE;&#x6539;vuex/actions.js</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> updateName = ({ dispatch }, name) =&gt; {
+&#x3000; dispatch(<span class="hljs-string">&apos;UPDATE_NAME&apos;</span>, name);
+}
+<span class="hljs-comment">// &#x4FEE;&#x6539;vuex/store.js</span>
+<span class="hljs-keyword">const</span> mutations = {
+&#x3000; <span class="hljs-comment">// &#x2026;..</span>
+&#x3000; UPDATE_NAME(state, value) {
+&#x3000;&#x3000; state.name = value;
+&#x3000; }
+};
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x65E2;&#x80FD;&#x4F7F;&#x7528;v-model&#xFF0C;&#x53C8;&#x5BF9;state&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x4E86;&#x8DDF;&#x8E2A;&#x3002;&#x5982;&#x679C;&#x89C9;&#x5F97;&#x6BCF;&#x6B21;input&#x4E8B;&#x4EF6;&#x90FD;&#x8C03;&#x7528;action&#x4F1A;&#x5F15;&#x8D77;&#x6027;&#x80FD;&#x635F;&#x8017;&#x7684;&#x8BDD;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;v-model&#x672C;&#x8EAB;&#x7684;lazy&#x4FEE;&#x9970;&#x7B26;&#x6765;&#x964D;&#x4F4E;&#x8C03;&#x7528;&#x9891;&#x7387;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chapter8/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第 8 章 Vue.js工程实例">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第 9 章 状态管理：Vuex","level":"1.10","depth":1,"previous":{"title":"第 8 章 Vue.js工程实例","level":"1.9","depth":1,"path":"chapter8/README.md","ref":"chapter8/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter9/README.md","mtime":"2019-12-06T01:43:12.240Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T02:15:04.913Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

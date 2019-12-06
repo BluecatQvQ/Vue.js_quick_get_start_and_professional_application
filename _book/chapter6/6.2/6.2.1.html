@@ -1566,6 +1566,90 @@
             
         </li>
     
+        <li class="chapter " data-level="1.8" data-path="../../chapter7/">
+            
+                <a href="../../chapter7/">
+            
+                    
+                    第 7 章 Vue.js常用插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../chapter7/7.1/">
+            
+                <a href="../../chapter7/7.1/">
+            
+                    
+                    7.1 Vue-router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../chapter7/7.2/">
+            
+                <a href="../../chapter7/7.2/">
+            
+                    
+                    7.2 Vue-resource
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../chapter7/7.3/">
+            
+                <a href="../../chapter7/7.3/">
+            
+                    
+                    7.3 Vue-devtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../chapter8/">
+            
+                <a href="../../chapter8/">
+            
+                    
+                    第 8 章 Vue.js工程实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../chapter9/">
+            
+                <a href="../../chapter9/">
+            
+                    
+                    第 9 章 状态管理：Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -1612,6 +1696,25 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="621-&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#x4E2D;&#x4E0E;vue&#x9009;&#x9879;&#x7684;&#x533A;&#x522B;">6.2.1 &#x7EC4;&#x4EF6;&#x9009;&#x9879;&#x4E2D;&#x4E0E;Vue&#x9009;&#x9879;&#x7684;&#x533A;&#x522B;</h1>
+<p>&#x7EC4;&#x4EF6;&#x9009;&#x9879;&#x4E2D;&#x7684;el&#x548C;data&#x4E0E;Vue&#x6784;&#x9020;&#x5668;&#x9009;&#x9879;&#x4E2D;&#x8FD9;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x8D4B;&#x503C;&#x4F1A;&#x7A0D;&#x5FAE;&#x6709;&#x4E9B;&#x4E0D;&#x540C;&#x3002;&#x5728;Vue&#x6784;&#x9020;&#x5668;&#x4E2D;&#x662F;&#x76F4;&#x63A5;&#x8D4B;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+&#x3000;el : <span class="hljs-string">&apos;#app&apos;</span>,
+&#x3000;data : {
+&#x3000;&#x3000;name : <span class="hljs-string">&apos;Vue&apos;</span>
+&#x3000;}
+})
+</code></pre>
+<p>&#x800C;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x9700;&#x8981;&#x8FD9;&#x4E48;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> MyComponent = Vue.extend({
+&#x3000;data : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+&#x3000;&#x3000;<span class="hljs-keyword">return</span> {
+&#x3000;&#x3000;&#x3000;&#x3000;name : <span class="hljs-string">&apos;component&apos;</span>
+&#x3000;&#x3000;}
+&#x3000;}
+})
+</code></pre>
+<p>&#x8FD9;&#x662F;&#x56E0;&#x4E3A;MyComponent&#x53EF;&#x80FD;&#x4F1A;&#x62E5;&#x6709;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x67D0;&#x4E2A;&#x7EC4;&#x4EF6;&#x6A21;&#x677F;&#x4E2D;&#x591A;&#x6B21;&#x4F7F;&#x7528;<my-component>&lt;/my-component&gt;&#x3002;&#x5982;&#x679C;&#x5C06;&#x5BF9;&#x8C61;data&#x76F4;&#x63A5;&#x4F20;&#x9012;&#x7ED9;&#x4E86;Vue.extend({})&#xFF0C;&#x90A3;&#x6240;&#x6709;MyComponent&#x7684;&#x5B9E;&#x4F8B;&#x4F1A;&#x5171;&#x4EAB;&#x4E00;&#x4E2A;data&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x6765;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;&#x3002;&#x540C;&#x6837;&#xFF0C;el&#x4E5F;&#x662F;&#x8FD9;&#x4E48;&#x5904;&#x7406;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x901A;&#x8FC7;el&#x6765;&#x76F4;&#x63A5;&#x8BBE;&#x5B9A;&#x6302;&#x8F7D;&#x5143;&#x7D20;&#x7684;&#x60C5;&#x51B5;&#x6BD4;&#x8F83;&#x5C11;&#x89C1;&#xFF0C;&#x81EA;&#x7136;&#x907F;&#x514D;&#x4E86;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x3002;</my-component></p>
+<p><strong>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x7EC4;&#x4EF6;&#x4E2D;data&#x7684;&#x8D4B;&#x503C;&#x662F;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x8FD4;&#x56DE;</strong></p>
 
                                 
                                 </section>
@@ -1655,7 +1758,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.2.1 组件选项中与Vue选项的区别","level":"1.7.2.1","depth":3,"next":{"title":"6.2.2 组件Props","level":"1.7.2.2","depth":3,"path":"chapter6/6.2/6.2.2.md","ref":"chapter6/6.2/6.2.2.md","articles":[]},"previous":{"title":"6.2 组件选项","level":"1.7.2","depth":2,"path":"chapter6/6.2/README.md","ref":"chapter6/6.2/README.md","articles":[{"title":"6.2.1 组件选项中与Vue选项的区别","level":"1.7.2.1","depth":3,"path":"chapter6/6.2/6.2.1.md","ref":"chapter6/6.2/6.2.1.md","articles":[]},{"title":"6.2.2 组件Props","level":"1.7.2.2","depth":3,"path":"chapter6/6.2/6.2.2.md","ref":"chapter6/6.2/6.2.2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.2/6.2.1.md","mtime":"2019-12-04T08:19:20.886Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-04T09:07:47.962Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.2.1 组件选项中与Vue选项的区别","level":"1.7.2.1","depth":3,"next":{"title":"6.2.2 组件Props","level":"1.7.2.2","depth":3,"path":"chapter6/6.2/6.2.2.md","ref":"chapter6/6.2/6.2.2.md","articles":[]},"previous":{"title":"6.2 组件选项","level":"1.7.2","depth":2,"path":"chapter6/6.2/README.md","ref":"chapter6/6.2/README.md","articles":[{"title":"6.2.1 组件选项中与Vue选项的区别","level":"1.7.2.1","depth":3,"path":"chapter6/6.2/6.2.1.md","ref":"chapter6/6.2/6.2.1.md","articles":[]},{"title":"6.2.2 组件Props","level":"1.7.2.2","depth":3,"path":"chapter6/6.2/6.2.2.md","ref":"chapter6/6.2/6.2.2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/6.2/6.2.1.md","mtime":"2019-12-05T02:10:40.110Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T02:15:04.913Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
